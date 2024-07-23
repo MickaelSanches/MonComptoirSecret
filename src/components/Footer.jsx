@@ -1,6 +1,6 @@
 import GoogleMap from '../components/GoogleMap.jsx';
 const mapCoordinates = { lat: 45.69775390625, lng: 5.905280113220215 };
-const googleApiKey = 'AIzaSyCjon8hxYscGO-uohSaCNNzij7459SmbbU';
+const googleApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const Footer = () => {
     return (
