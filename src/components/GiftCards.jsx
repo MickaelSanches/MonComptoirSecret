@@ -18,12 +18,12 @@ const GiftCards = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Cartes Cadeaux</h2>
-      <ul>
+    <div className="p-4 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-4">Cartes Cadeaux</h2>
+      <ul className="list-disc list-inside">
         {giftCards.length > 0 ? (
           giftCards.map((card) => (
-            <li key={card.id}>
+            <li key={card.id} className="mb-2">
               {card.name}: {card.price}€
             </li>
           ))
@@ -36,3 +36,4 @@ const GiftCards = () => {
 };
 
 export default GiftCards;
+

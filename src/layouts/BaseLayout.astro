@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/img/logomcs.webp" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Mon Comptoir Secret"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mon-comptoir-secret.vercel.app/" />
+		<meta property="og:site_name" content="Mon Comptoir Secret" />
+		<meta property="og:title" content="Mon Comptoir Secret" />
+	
+		<script
+			is:inline
+			src="https://kit.fontawesome.com/2898a0ac51.js"
+			crossorigin="anonymous"></script>
+		<title>Mon Comptoir Secret</title>
+	</head>
+	<body>
+		<slot />
+		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	</body>
+	</html>

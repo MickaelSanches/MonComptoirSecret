@@ -1,52 +1,34 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.jsx';
 import NewsTicker from '../components/NewsTicker.jsx';
----
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Mon Comptoir Secret"
-		/>
-		<meta name="robots" content="index, follow" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://mon-comptoir-secret.vercel.app/" />
-		<meta property="og:site_name" content="Mon Comptoir Secret" />
-		<meta property="og:title" content="Mon Comptoir Secret" />
-	
-		<script
-			is:inline
-			src="https://kit.fontawesome.com/2898a0ac51.js"
-			crossorigin="anonymous"></script>
-		<title>Mon Comptoir Secret</title>
-	</head>
+// import PhotoCarousel from '../components/PhotoCarousel.jsx';
+import GoogleReviews from '../components/GoogleReviews.jsx';
+import Footer from '../components/Footer.jsx';
 
-<NewsTicker />
-<Header />
-<main>
-	<section>
-    <!-- Informations sur l'institut -->
-	</section>
-	<section>
-    <!-- Nouveautés -->
-	</section>
-	<section>
-    <!-- Histoire de Estelle -->
-	</section>
-	<section>
-    <!-- Carrousel de photos -->
-	</section>
-	<section>
-    <!-- Avis Google -->
-	</section>
-	<section>
-    <!-- Google Maps -->
-	</section>
-</main>
-<footer>
-	<!-- Mentions légales -->
-</footer>
+---
+
+<BaseLayout>
+	<NewsTicker />
+	<Header />
+	<main>
+		<section>
+			<h2>Nouveautés</h2>
+			<!-- Nouveautés -->
+		</section>
+		<section>
+			<h2>Histoire de Estelle</h2>
+			<!-- Début de l'histoire de Estelle -->
+		</section>
+		<!--<section>
+			<PhotoCarousel />
+		</section>-->
+		<section>
+			<GoogleReviews />
+		</section>
+		<!-- <section>
+			<GoogleMap lat={mapCoordinates.lat} lng={mapCoordinates.lng} apiKey={googleApiKey} />
+		</section>-->
+	</main>
+	<Footer /> 
+</BaseLayout>
