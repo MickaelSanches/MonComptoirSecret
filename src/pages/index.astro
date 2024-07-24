@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.jsx';
 import NewsTicker from '../components/NewsTicker.jsx';
-// import PhotoCarousel from '../components/PhotoCarousel.jsx';
+import PhotoCarousel from '../components/PhotoCarousel.jsx';
 import GoogleReviews from '../components/GoogleReviews.jsx';
 import Footer from '../components/Footer.jsx';
 
@@ -20,9 +20,9 @@ import Footer from '../components/Footer.jsx';
 			<h2>Histoire de Estelle</h2>
 			<!-- Début de l'histoire de Estelle -->
 		</section>
-		<!--<section>
-			<PhotoCarousel />
-		</section>-->
+		<section>
+			<PhotoCarousel client:load />
+		</section>
 		<section>
 			<GoogleReviews />
 		</section>
