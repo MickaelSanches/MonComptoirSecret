@@ -30,9 +30,11 @@ const Nouveautes = () => {
           .nouveautes-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
+            height: 400px;
             margin: auto;
             overflow: hidden;
+            border-radius: 10px;
           }
 
           .nouveautes-carousel {
@@ -43,11 +45,15 @@ const Nouveautes = () => {
 
           .nouveautes-slide {
             min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .nouveautes-image {
-            width: 100%;
-            display: block;
+            width: auto;
+            height: 400px;
+            object-fit: cover;
           }
         `}</style>
         <div className="nouveautes-carousel">
