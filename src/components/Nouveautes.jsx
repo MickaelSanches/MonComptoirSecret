@@ -5,7 +5,6 @@ const nouveautesItems = [
   { type: 'image', src: '/img/epilation1.webp' },
   { type: 'image', src: '/img/epilation2.webp' },
   { type: 'image', src: '/img/epilation3.webp' },
-  { type: 'image', src: '/img/epilation.webp' },
 ];
 
 const Nouveautes = () => {

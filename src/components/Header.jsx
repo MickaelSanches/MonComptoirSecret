@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,15 +8,15 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-header text-black p-1 flex justify-between items-center">
+    <header className="bg-gradient-header text-black p-1 flex justify-between items-center z-50 relative">
       <a href="#accueil">
-    <img 
-    src="/img/logosansfond.webp" 
-    alt="Logo de Mon Comptoir Secret" 
-    id="accueil-logo" 
-    className="w-60 h-auto"
-    />
-  </a>
+        <img 
+          src="/img/logosansfond.webp" 
+          alt="Logo de Mon Comptoir Secret" 
+          id="accueil-logo" 
+          className="w-60 h-auto"
+        />
+      </a>
       <nav className="hidden md:flex space-x-4 text-black mr-4">
         <ul className="flex space-x-4">
           <li><a href="/" className="hover:text-gradientStart">Accueil</a></li>
@@ -28,7 +28,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className="md:hidden mr-4">
-<button
+        <button
           onClick={toggleMenu}
           className="flex flex-col justify-between w-8 h-6 focus:outline-none"
         >
@@ -36,7 +36,7 @@ const Header = () => {
           <span className={`block w-full h-0.5 bg-current transition duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></span>
           <span className={`block w-full h-0.5 bg-current transform transition duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
-        <nav className={`absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 transform transition duration-300 ease-in-out ${isOpen ? 'scale-100' : 'scale-0'}`}>
+        <nav className={`absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 transform transition duration-300 ease-in-out z-50 ${isOpen ? 'scale-100' : 'scale-0'}`}>
           <a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Accueil</a>
           <a href="/prestations" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Prestations</a>
           <a href="/histoire" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Histoire</a>
