@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const nouveautesImages = [
-  '/img/Photo-CV.jpg',
-  '/img/ARTISAN BEAUTE.png',
-  '/img/LogoMike.png',
-  '/img/logosansfond.webp',
-  '/img/logomcs.webp',
+const nouveautesItems = [
+  { type: 'video', src: '/img/epilation.mp4' },
+  { type: 'image', src: '/img/epilation1.webp' },
+  { type: 'image', src: '/img/epilation2.webp' },
+  { type: 'image', src: '/img/epilation3.webp' },
+  { type: 'image', src: '/img/epilation.webp' },
 ];
 
 const Nouveautes = () => {
@@ -13,85 +13,70 @@ const Nouveautes = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === nouveautesImages.length - 1 ? 0 : prevIndex + 1));
-    }, 3000); // Change image every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex === nouveautesItems.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // Change item every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="nouveautes-section p-4 mb-8 relative">
+    <section className="nouveautes-section p-4 mb-8 relative w-full">
       <h2 className="text-2xl font-bold mb-4 text-center text-black">Nouveautés</h2>
       <p className="mb-4 text-center text-black">
         Découvrez les dernières nouveautés et promotions de notre institut. Profitez de nos nouvelles offres et soins exclusifs !
       </p>
-      <div className="nouveautes-container relative">
-        <div className="background-image-container absolute inset-0 z-0">
-          {nouveautesImages.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Background Slide ${index}`}
-              className={`background-image transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-            />
-          ))}
-        </div>
-        <div className="relative z-10">
-          <style>{`
-            .nouveautes-container {
-              position: relative;
-              width: 100%;
-              max-width: 100%;
-              height: 500px;
-              margin: auto;
-              overflow: hidden;
-              border-radius: 10px;
-            }
+      <div className="nouveautes-container relative w-full">
+        <style>{`
+          .nouveautes-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+          }
 
-            .nouveautes-carousel {
-              display: flex;
-              transition: transform 0.5s ease-in-out;
-              transform: translateX(-${currentIndex * 100}%);
-              height: 100%;
-            }
+          .nouveautes-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-${currentIndex * 100}%);
+            height: auto;
+          }
 
-            .nouveautes-slide {
-              min-width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100%;
-            }
+          .nouveautes-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+          }
 
-            .nouveautes-image {
-              max-width: 100%;
-              max-height: 100%;
-              object-fit: fill;
-              border-radius: 15px;
-            }
+          .nouveautes-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+          }
 
-            .background-image-container {
-              filter: blur(10px);
-              overflow: hidden;
-            }
-
-            .background-image {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: -1;
-            }
-          `}</style>
-          <div className="nouveautes-carousel">
-            {nouveautesImages.map((image, index) => (
+          .nouveautes-video {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+          }
+        `}</style>
+        <div className="nouveautes-carousel">
+          {nouveautesItems.map((item, index) => (
+            item.type === 'image' ? (
               <div key={index} className="nouveautes-slide">
-                <img src={image} alt={`Slide ${index}`} className="nouveautes-image" />
+                <img src={item.src} alt={`Slide ${index}`} className="nouveautes-image" />
               </div>
-            ))}
-          </div>
+            ) : (
+              <div key={index} className="nouveautes-slide">
+                <video src={item.src} autoPlay loop muted className="nouveautes-video" />
+              </div>
+            )
+          ))}
         </div>
       </div>
     </section>
