@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.jsx";
+import NewsTicker from "../components/NewsTicker.jsx";
+import Footer from "../components/Footer.jsx";
+---
+
+<BaseLayout>
+    <NewsTicker />
+    <Header client:load />
+    <main class="p-4 text-black">
+    <h1 class="text-3xl font-bold mb-6 text-center">Mentions Légales</h1>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Éditeur du site</h2>
+        <p class="italic">
+        Nom de l'entreprise : Mon Comptoir Secret<br />
+        Responsable de publication : Estelle Chiocchio<br />
+        Adresse : 4 Chemin en calloud, 73100 Aix les Bains<br />
+        Téléphone : 0617344999<br />
+        Email : moncomptoirsecret@gmail.com
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Hébergement</h2>
+        <p class="italic">
+        Nom de l'hébergeur : Vercel Inc.<br />
+        Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789<br />
+        Téléphone : Non spécifié
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">
+        Collecte et traitement des données
+        </h2>
+        <p class="italic">
+        Conformément à la loi n°78-17 du 6 janvier 1978 relative à
+        l'informatique, aux fichiers et aux libertés, et au Règlement Général
+        sur la Protection des Données (RGPD), vous disposez d'un droit d'accès,
+        de rectification, de suppression et d'opposition au traitement des
+        données personnelles vous concernant. Vous pouvez exercer ces droits en
+        envoyant un email à moncomptoirsecret@gmail.com.
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Propriété intellectuelle</h2>
+        <p class="italic">
+        Le contenu du site (textes, images, graphismes, logo, etc.) est la
+        propriété exclusive de Mon Comptoir Secret, sauf mention contraire.
+        Toute reproduction, distribution, modification, adaptation,
+        retransmission ou publication, même partielle, de ces différents
+        éléments est strictement interdite sans l'accord exprès par écrit de Mon
+        Comptoir Secret.
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Responsabilité</h2>
+        <p class="italic">
+        Mon Comptoir Secret s'efforce de fournir des informations aussi précises
+        que possible sur le site. Toutefois, Mon Comptoir Secret ne pourra être
+        tenue responsable des omissions, des inexactitudes et des carences dans
+        la mise à jour, qu'elles soient de son fait ou du fait des tiers
+        partenaires qui lui fournissent ces informations.
+        </p>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">
+        Conditions Générales de Vente (CGV)
+        </h2>
+        <div class="italic">
+        <h3 class="text-xl font-bold">1. Champ d'application</h3>
+        <p>
+            Les présentes conditions générales de vente régissent les relations
+            contractuelles entre l'institut d'esthétique "Mon Comptoir Secret",
+            représenté par Estelle Chiocchio, SARL Unipersonnelle immatriculée sous
+            le numéro 93073586500014, dont le siège social est situé 4 Chemin 
+            Calloud, 73100 Aix les Bains et le client.
+        </p>
+        <h3 class="text-xl font-bold">2. Prestations proposées</h3>
+        <p>"Mon Comptoir Secret" propose les prestations suivantes :</p>
+        <ul class="list-disc ml-6">
+            <li>Onglerie (pose d'ongles, manucure, etc.)</li>
+            <li>Soins esthétiques (soins du visage, soins du corps, etc.)</li>
+            <li>Épilation</li>
+            <li>Maquillage</li>
+            <li>Vente de produits cosmétiques</li>
+            <li>Vente d'accessoires</li>
+        </ul>
+        <h3 class="text-xl font-bold">3. Tarifs</h3>
+        <p>
+            Les tarifs des prestations sont consultables sur place et peuvent être
+            modifiés à tout moment par "Mon Comptoir Secret". Les prix facturés
+            sont ceux en vigueur au moment de la prise de rendez-vous.
+        </p>
+        <h3 class="text-xl font-bold">4. Réservation et annulation</h3>
+        <p>
+            Les rendez-vous peuvent être réservés en personne, par téléphone ou en
+            ligne. Toute annulation doit être effectuée au moins 24 heures avant
+            le rendez-vous prévu. En cas d'annulation tardive ou de
+            non-présentation, "Mon Comptoir Secret" se réserve le droit de
+            facturer des frais d'annulation.
+        </p>
+        <h3 class="text-xl font-bold">5. Paiement</h3>
+        <p>
+            Les paiements peuvent être effectués en espèces, par carte bancaire ou
+            tout autre moyen de paiement accepté par "Mon Comptoir Secret". Les
+            produits vendus doivent être réglés immédiatement.
+        </p>
+        <h3 class="text-xl font-bold">6. Confidentialité</h3>
+        <p>
+            "Mon Comptoir Secret" s'engage à préserver la confidentialité des
+            informations personnelles fournies par le client et à ne pas les
+            divulguer à des tiers.
+        </p>
+        <h3 class="text-xl font-bold">7. Responsabilité</h3>
+        <p>
+            "Mon Comptoir Secret" décline toute responsabilité en cas d'allergies,
+            de réactions cutanées ou de tout autre problème de santé lié aux
+            prestations ou aux produits utilisés. Il est de la responsabilité du
+            client de signaler toute condition médicale préexistante.
+        </p>
+        <h3 class="text-xl font-bold">8. Droit de rétractation</h3>
+        <p>
+            Conformément à la législation en vigueur, le droit de rétractation ne
+            s'applique pas aux achats effectués directement en magasin,
+            conformément à l'article L.221-28 du Code de la consommation. De même,
+            les achats réalisés dans le cadre d'une foire ou d'un salon ne sont
+            pas soumis au droit de rétractation.
+        </p>
+        <p>
+            Pour les achats en ligne : Conformément à l'article L.121-21 du Code
+            de la Consommation, vous disposez d'un délai de rétractation de 14
+            jours à compter de la réception de vos produits pour exercer votre
+            droit de rétraction. Aucune justification n'est nécessaire, et aucun
+            frais de pénalité ne sera appliqué. Les retours doivent être effectués
+            dans leur état d'origine, incluant l'emballage, les accessoires et la
+            notice. La responsabilité du client est engagée, et tout dommage au
+            produit peut faire échec au droit de rétractation. Les frais de retour
+            sont à la charge du client. En cas d'exercice du droit de
+            rétractation, la micro-entreprise de Mme Estelle Chiocchio procédera
+            au remboursement des sommes versées dans un délai de 14 jours suivant
+            la notification de votre demande.
+        </p>
+        <p>
+            Exceptions au droit de rétractation : Conformément à l'article
+            L.121-21-8 du Code de la Consommation, le droit de rétractation ne
+            s'applique pas à :
+        </p>
+        <ul class="list-disc ml-6">
+            <li>
+            La fourniture de services pleinement exécutés avant la fin du délai
+            de rétractation et dont l'exécution a commencé après accord
+            préalable exprès du consommateur et renoncement exprès à son droit
+            de rétractation.
+            </li>
+            <li>
+            La fourniture de biens ou de services dont le prix dépend de
+            fluctuations sur le marché financier échappant au contrôle du
+            professionnel et susceptibles de se produire pendant le délai de
+            rétractation.
+            </li>
+            <li>
+            La fourniture de biens confectionnés selon les spécifications du
+            consommateur ou nettement personnalisés.
+            </li>
+            <li>
+            La fourniture de biens susceptibles de se détériorer ou de se
+            périmer rapidement.
+            </li>
+            <li>
+            La fourniture de biens qui ont été descellés par le consommateur
+            après la livraison et qui ne peuvent être renvoyés pour des raisons
+            d'hygiène ou de protection de la santé.
+            </li>
+            <li>
+            La fourniture de biens qui, après avoir été livrés et du fait de
+            leur nature, sont mélangés de manière indissociable avec d'autres
+            articles.
+            </li>
+        </ul>
+        <p>
+            Il est important de noter que le droit de rétractation ne s'applique
+            pas aux prestations de services, tels que les soins esthétiques,
+            entamées avec l'accord préalable du client avant la fin du délai de
+            rétractation.
+        </p>
+        <h3 class="text-xl font-bold">9. Litiges</h3>
+        <p>
+            En cas de litige, les parties s'engagent à rechercher une solution
+            amiable. À défaut, le litige sera soumis à la juridiction compétente
+            conformément à la législation en vigueur.
+        </p>
+        <h3 class="text-xl font-bold">
+            10. Modification des conditions générales de vente
+        </h3>
+        <p>
+            "Mon Comptoir Secret" se réserve le droit de modifier les présentes
+            conditions générales de vente à tout moment. Les nouvelles conditions
+            générales seront applicables dès leur publication.
+        </p>
+        <p>
+            Fait à Aix les Bains, le 01/10/2023<br />Estelle Chiocchio, Gérante de
+            Mon Comptoir Secret
+        </p>
+        </div>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">
+        Création et développement du site
+        </h2>
+        <p class="italic">
+        Développeur : Mickael Sanches Loureiro<br />
+        Email : mickael.4870@gmail.com<br />
+        <a
+            href="https://mickaelsanchesloureiro.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer">Site web</a
+        >
+        </p>
+    </section>
+    </main>
+    <Footer />
+</BaseLayout>
