@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const images = [
+const nouveautesImages = [
   '/img/Photo-CV.jpg',
   '/img/ARTISAN BEAUTE.png',
   '/img/LogoMike.png',
@@ -13,8 +13,8 @@ const Nouveautes = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    }, 1000); // Change image every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex === nouveautesImages.length - 1 ? 0 : prevIndex + 1));
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -25,9 +25,9 @@ const Nouveautes = () => {
       <p className="mb-4 text-black">
         Découvrez les dernières nouveautés et promotions de notre institut. Profitez de nos nouvelles offres et soins exclusifs !
       </p>
-      <div className="carousel-container">
+      <div className="nouveautes-container">
         <style jsx>{`
-          .carousel-container {
+          .nouveautes-container {
             position: relative;
             width: 100%;
             max-width: 600px;
@@ -35,25 +35,25 @@ const Nouveautes = () => {
             overflow: hidden;
           }
 
-          .carousel {
+          .nouveautes-carousel {
             display: flex;
             transition: transform 0.5s ease-in-out;
             transform: translateX(-${currentIndex * 100}%);
           }
 
-          .carousel-slide {
+          .nouveautes-slide {
             min-width: 100%;
           }
 
-          .carousel-image {
+          .nouveautes-image {
             width: 100%;
             display: block;
           }
         `}</style>
-        <div className="carousel">
-          {images.map((image, index) => (
-            <div key={index} className="carousel-slide">
-              <img src={image} alt={`Slide ${index}`} className="carousel-image" />
+        <div className="nouveautes-carousel">
+          {nouveautesImages.map((image, index) => (
+            <div key={index} className="nouveautes-slide">
+              <img src={image} alt={`Slide ${index}`} className="nouveautes-image" />
             </div>
           ))}
         </div>
