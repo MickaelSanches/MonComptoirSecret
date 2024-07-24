@@ -1,10 +1,121 @@
 ---
-// Votre code ici
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.jsx';
+import NewsTicker from '../components/NewsTicker.jsx';
+import Footer from '../components/Footer.jsx';
 ---
 
-<main>
-    <h1>Nos Prestations</h1>
-    <section>
-    <!-- Détails des prestations -->
+<BaseLayout>
+  <NewsTicker />
+  <Header client:load />
+  <main class="p-4 text-black">
+    <h1 class="text-3xl font-bold mb-6 text-center">Nos Prestations</h1>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="prestations-item">
+        <img src="/img/7.webp" alt="Onglerie" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Onglerie</h2>
+          <p class="prestations-description">Pose semi-permanent, Gel X, Porcelaine, Nail Art, BabyBoomer.</p>
+          <p class="prestations-price">À partir de 33€</p>
+        </div>
+      </div>
+      <div class="prestations-item">
+        <img src="/img/8.webp" alt="Soins esthétiques" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Beauté du regard</h2>
+          <p class="prestations-description">Réhaussement de cils, Teinture cils, Teinture sourcils.</p>
+          <p class="prestations-price">À partir de 19€</p>
+        </div>
+      </div>
+      <div class="prestations-item">
+        <img src="/img/epilation1.webp" alt="EpilationDef" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Épilation définitive</h2>
+          <p class="prestations-description">À la lumière pulsée</p>
+          <p class="prestations-price">À définir selon la zone &/ou sur forfait</p>
+        </div>
+      </div>
+      <div class="prestations-item">
+        <img src="/img/prestation4.jpg" alt="Photorajeunissement" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Photorajeunissement</h2>
+          <p class="prestations-description">À la lumière pulsée</p>
+          <p class="prestations-price">À définir selon la zone &/ou sur forfait</p>
+        </div>
+      </div>
+      <div class="prestations-item">
+        <img src="/img/prestation3.jpg" alt="Épilation" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Épilation</h2>
+          <p class="prestations-description">Toutes les zones du corps</p>
+          <p class="prestations-price">À partir de 10€ &/ou sur forfaits</p>
+        </div>
+      </div>
+      <div class="prestations-item">
+        <img src="/img/prestation4.jpg" alt="Maquillage" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Maquillage</h2>
+          <p class="prestations-description">Maquillage de jour, de soirée, mariée (sur devis).</p>
+          <p class="prestations-price">À partir de 40€</p>
+        </div>
+      </div>
+      <!--<div class="prestations-item">
+        <img src="/img/prestation5.jpg" alt="Vente de produits cosmétiques" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Vente de produits cosmétiques</h2>
+          <p class="prestations-description">Produits de beauté de qualité</p>
+        </div>
+      </div> -->
+      <div class="prestations-item">
+        <img src="/img/prestation6.jpg" alt="Vente d'accessoires" class="prestations-image"/>
+        <div class="prestations-content">
+          <h2 class="prestations-title">Vente d'accessoires</h2>
+          <p class="prestations-description">Bijoux & Accessoires de beauté divers</p>
+        </div>
+      </div>
     </section>
-</main>
+    <style>
+      .prestations-item {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .prestations-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .prestations-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+
+      .prestations-content {
+        padding: 1rem;
+      }
+
+      .prestations-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .prestations-description {
+        margin-top: 0.5rem;
+        font-style: italic;
+      }
+
+      .prestations-price {
+        margin-top: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #D0AFA8;
+      }
+    </style>
+  </main>
+  <Footer />
+</BaseLayout>
