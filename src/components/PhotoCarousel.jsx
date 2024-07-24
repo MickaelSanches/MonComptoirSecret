@@ -64,7 +64,7 @@ const PhotoCarousel = () => {
           color: white;
           border: none;
           padding: 10px;
-          cursor: pointer;
+          cursor: none;
         }
 
         .carousel-button.prev {

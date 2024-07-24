@@ -1,6 +1,6 @@
 const GoogleMap = ({ lat, lng, apiKey }) => {
     return (
-    <div className="mt-4 mx-auto hidden xs:block" >
+    <div className="map-container mt-4 mx-auto hidden xs:block" >
         <iframe
         width="500px"
         height="100px"

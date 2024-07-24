@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const GoogleReviews = () => {
   useEffect(() => {
@@ -21,6 +21,7 @@ const GoogleReviews = () => {
           max-width: 700px;
           margin: auto;
           padding: 20px;
+          cursor: none;
         }
         .elfsight-app-26e0cd9c-145e-4ff6-8e65-ce5b61c50216 {
           max-width: 100%;
