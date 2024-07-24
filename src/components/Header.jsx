@@ -1,4 +1,4 @@
-
+import BurgerMenu from '../components/BurgerMenu';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
     className="w-60 h-auto"
     />
   </a>
-      <nav>
+      <nav className="hidden md:flex space-x-4 text-black">
         <ul className="flex space-x-4">
           <li><a href="/" className="hover:text-gradientStart">Accueil</a></li>
           <li><a href="/prestations" className="hover:text-gradientStart">Prestations</a></li>
@@ -21,6 +21,9 @@ const Header = () => {
           <li><a href="/contact" className="hover:text-gradientStart">Contact</a></li>
         </ul>
       </nav>
+      <div className="md:hidden">
+        <BurgerMenu />
+      </div>
     </header>
   );
 };
