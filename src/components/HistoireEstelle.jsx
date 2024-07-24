@@ -7,9 +7,9 @@ const HistoireEstelle = () => {
 
   return (
     <section 
-    className="histoire-section p-4 bg-gray-100 rounded-lg shadow-lg transform scale-100 hover:scale-105 transition-transform duration-300" 
-    style={{ maxWidth: '1000px', position: 'relative', right: '-25%' }}>
-      <h2 className="text-2xl font-bold mb-4 text-black">Histoire de Estelle</h2>
+      className="histoire-section p-4 bg-gray-100 rounded-lg shadow-lg transform scale-100 hover:scale-105 transition-transform duration-300 mx-auto" 
+      style={{ maxWidth: '1000px' }}>
+      <h2 className="text-2xl font-bold mb-4 text-black text-center">Histoire de Estelle</h2>
       <div className="flex flex-col items-center">
         <div className="w-24 h-24 mb-4">
           <img src="/img/Photo-CV.jpg" alt="Estelle" className="w-full h-full rounded-full object-cover" />

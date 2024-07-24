@@ -13,7 +13,7 @@ import Footer from '../components/Footer.jsx';
 <BaseLayout>
 	<NewsTicker />
 	<Header client:load />
-	<main class="space-y-8">
+	<main class="space-y-8 px-4">
 		<section>
 			<Nouveautes client:load />
 		</section>
@@ -24,7 +24,7 @@ import Footer from '../components/Footer.jsx';
 			<PhotoCarousel client:load />
 		</section>
 		<section>
-			<GoogleReviews />
+			<GoogleReviews client:load />
 		</section>
 		<!-- <section>
 			<GoogleMap lat={mapCoordinates.lat} lng={mapCoordinates.lng} apiKey={googleApiKey} />
