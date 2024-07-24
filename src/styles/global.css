@@ -3,3 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles */
+body {
+    @apply font-montserrat text-primary;
+}

@@ -5,7 +5,19 @@ export default {
     './public/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+        primary: '#F4D7CF',
+        gradientStart: '#D0AFA8',
+        gradientEnd: '#FFFFFF',
+      },
+      backgroundImage: {
+        'gradient-header': 'linear-gradient(to right, #D0AFA8, #FFFFFF)',
+      },
+    },
   },
   plugins: [],
 }
