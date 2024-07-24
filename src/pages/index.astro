@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.jsx';
 import NewsTicker from '../components/NewsTicker.jsx';
+import Nouveautes from '../components/Nouveautes.jsx';
+import HistoireEstelle from '../components/HistoireEstelle.jsx';
 import PhotoCarousel from '../components/PhotoCarousel.jsx';
 import GoogleReviews from '../components/GoogleReviews.jsx';
 import Footer from '../components/Footer.jsx';
@@ -13,12 +15,10 @@ import Footer from '../components/Footer.jsx';
 	<Header client:load />
 	<main>
 		<section>
-			<h2>Nouveautés</h2>
-			<!-- Nouveautés -->
+			<Nouveautes client:load />
 		</section>
 		<section>
-			<h2>Histoire de Estelle</h2>
-			<!-- Début de l'histoire de Estelle -->
+			<HistoireEstelle client:load />
 		</section>
 		<section>
 			<PhotoCarousel client:load />
