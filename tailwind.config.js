@@ -16,6 +16,10 @@ export default {
       },
       backgroundImage: {
         'gradient-header': 'linear-gradient(to right, #D0AFA8, #FFFFFF)',
+        'gradient-footer': 'linear-gradient(to left, #D0AFA8, #FFFFFF)',
+      },
+      screens: {
+        'xs': '700px',
       },
     },
   },
