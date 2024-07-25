@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 const Connect = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +10,6 @@ const Connect = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
-  const history = useHistory(); // Utilisation du hook useHistory pour la redirection
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -28,11 +26,12 @@ const Connect = () => {
       const response = await axios.post(url, payload);
 
       if (response.status !== 200) {
-        throw new Error(response.data.error || 'An error occurred');
+        throw new Error(response.data.error || 'Une erreur est survenue');
       }
 
       console.log('User logged in:', response.data);
-      history.push('/dashboard'); // Redirection vers le dashboard
+      // Rediriger vers le tableau de bord après la connexion
+      window.location.href = '/dashboard';
     } catch (err) {
       setError(err.message);
     }
