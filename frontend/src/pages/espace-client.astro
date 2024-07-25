@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.jsx';
+import NewsTicker from '../components/NewsTicker.jsx';
+import Footer from '../components/Footer.jsx';
+import Connect from '../components/Connect.jsx';
+import { UserProvider } from '../utils/auth.jsx';
+---
+
+<BaseLayout>
+  <NewsTicker />
+  <Header client:load />
+  <main class="p-4 text-black">
+    <UserProvider>
+      <Connect client:load />
+    </UserProvider>
+  </main>
+  <Footer />
+</BaseLayout>
