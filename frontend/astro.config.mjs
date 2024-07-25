@@ -9,6 +9,6 @@ export default defineConfig({
     output: 'static',
     integrations: [react(), tailwind()],
     build: {
-        outDir: 'dist', 
+        outDir: './frontend/dist', 
     }
 });
