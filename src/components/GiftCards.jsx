@@ -1,21 +1,28 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const GiftCards = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://www.planity.com/widget/script.js";
-    script.async = true;
-    script.onload = () => {
-      window.PlanityBooker.init({
-        establishmentKey: import.meta.env.PLANITY_API_KEY,
-        containerId: 'giftVoucherContainer'
-      });
+    const container = document.getElementById('giftVoucherContainer');
+    window.planity = {
+      key: '-Ndenpt2NBzQXjUpPT0x',
+      primaryColor: '#FF5733',
+      giftVoucherContainer: container,
     };
-    document.body.appendChild(script);
+
+    // Charger les scripts Planity
+    const script1 = document.createElement('script');
+    script1.src = '/js/polyfills.latest.js';
+    script1.async = true;
+    document.body.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.src = '/js/app.latest.js';
+    script2.async = true;
+    document.body.appendChild(script2);
   }, []);
 
   return (
-    <div id="giftVoucherContainer" style={{ minHeight: '600px' }}></div>
+    <div id="giftVoucherContainer"></div>
   );
 };
 

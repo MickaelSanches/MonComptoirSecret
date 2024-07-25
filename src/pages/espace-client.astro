@@ -4,22 +4,13 @@ import Header from '../components/Header.jsx';
 import NewsTicker from '../components/NewsTicker.jsx';
 import Footer from '../components/Footer.jsx';
 import Connect from '../components/Connect.jsx';
-import { UserProvider } from '../utils/auth.jsx';
-import BookAppointment from '../components/BookAppointment.jsx';
-import GiftCards from '../components/GiftCards.jsx';
-import UserAccount from '../components/UserAccount.jsx';
 ---
 
 <BaseLayout>
   <NewsTicker />
   <Header client:load />
   <main class="p-4 text-black">
-    <UserProvider>
-      <Connect client:load />
-      <BookAppointment client:load />
-      <GiftCards client:load />
-      <UserAccount client:load />
-    </UserProvider>
+    <Connect client:load />
   </main>
   <Footer />
 </BaseLayout>
