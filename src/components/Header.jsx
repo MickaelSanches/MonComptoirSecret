@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="bg-gradient-header text-black p-1 flex justify-between items-center z-50 relative">
-      <a href="#accueil">
+      <a href="/accueil">
         <img 
           src="/img/logosansfond.webp" 
           alt="Logo de Mon Comptoir Secret" 
