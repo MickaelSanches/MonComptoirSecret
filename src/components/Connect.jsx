@@ -1,26 +1,38 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 const Connect = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLogin, setIsLogin] = useState(true); // State to toggle between login and signup
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
+  const history = useHistory(); // Utilisation du hook useHistory pour la redirection
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (!isLogin && password !== confirmPassword) {
+      setError('Les mots de passe ne correspondent pas');
+      return;
+    }
+
     const url = isLogin ? 'http://localhost:3000/login' : 'http://localhost:3000/create-account';
-    
+    const payload = isLogin ? { email, password } : { email, password, firstName, lastName, phone };
+
     try {
-      const response = await axios.post(url, { email, password });
+      const response = await axios.post(url, payload);
 
       if (response.status !== 200) {
         throw new Error(response.data.error || 'An error occurred');
       }
 
       console.log('User logged in:', response.data);
-      // Handle successful login or signup (e.g., redirect, save token, etc.)
+      history.push('/dashboard'); // Redirection vers le dashboard
     } catch (err) {
       setError(err.message);
     }
@@ -33,6 +45,43 @@ const Connect = () => {
           {isLogin ? 'Connectez-vous' : 'Créer un compte'}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
+          {!isLogin && (
+            <>
+              <div>
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">Prénom:</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Nom:</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Téléphone:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+            </>
+          )}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
             <input
@@ -55,6 +104,19 @@ const Connect = () => {
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
+          {!isLogin && (
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirmer le mot de passe:</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+          )}
           {error && <p className="text-sm text-red-600">{error}</p>}
           <div>
             <button

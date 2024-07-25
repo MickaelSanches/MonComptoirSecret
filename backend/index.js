@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const axios = require('axios'); // Utilisation d'axios pour les requêtes HTTP
+const { Pool } = require('pg');
 
 dotenv.config();
 
@@ -12,48 +12,56 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Pool de connexion PostgreSQL
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
+
 // Endpoint de connexion
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const response = await axios.post('https://api.planity.com/v1/login', {
-      email,
-      password,
-    });
+    const { rows } = await pool.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, password]);
 
-    if (response.status !== 200) {
-      return res.status(response.status).json({ error: response.data.error || 'Login failed' });
+    if (rows.length === 0) {
+      return res.status(401).json({ error: 'Email ou mot de passe incorrect' });
     }
 
-    res.status(200).json(response.data);
+    const user = rows[0];
+    res.status(200).json({ user });
   } catch (error) {
-    console.error('Error during login:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Erreur lors de la connexion:', error);
+    res.status(500).json({ error: 'Erreur interne du serveur' });
   }
 });
 
 // Endpoint de création de compte
 app.post('/create-account', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, firstName, lastName, phone } = req.body;
 
   try {
-    const response = await axios.post('https://api.planity.com/v1/signup', {
-      email,
-      password,
-    });
+    console.log("Vérification de l'email:", email);
+    const { rows } = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
 
-    if (response.status !== 200) {
-      return res.status(response.status).json({ error: response.data.error || 'Signup failed' });
+    if (rows.length > 0) {
+      console.log("L'email est déjà utilisé");
+      return res.status(400).json({ error: 'L\'email est déjà utilisé' });
     }
 
-    res.status(200).json(response.data);
+    console.log("Création de l'utilisateur:", { email, password, firstName, lastName, phone });
+    await pool.query('INSERT INTO users (email, password, first_name, last_name, phone) VALUES ($1, $2, $3, $4, $5)', [email, password, firstName, lastName, phone]);
+    
+    res.status(200).json({ message: 'Compte créé avec succès' });
   } catch (error) {
-    console.error('Error during account creation:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Erreur lors de la création de compte:', error);
+    res.status(500).json({ error: 'Erreur interne du serveur' });
   }
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Le serveur fonctionne sur le port ${port}`);
 });
