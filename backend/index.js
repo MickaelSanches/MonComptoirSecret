@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const { createClient } = require('@supabase/supabase-js');
-const { Pool } = require('pg');
+const axios = require('axios'); // Utilisation d'axios pour les requêtes HTTP
 
 dotenv.config();
 
@@ -13,43 +12,45 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Initialize Supabase client
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-
-// Initialize PostgreSQL client
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
-
-pool.on('connect', () => {
-  console.log('Connected to the database');
-});
-
-// Test route to check database connection
-app.get('/test-db', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT NOW()');
-    res.status(200).json(result.rows);
-  } catch (error) {
-    console.error('Error executing query', error.stack);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-// Login route
+// Endpoint de connexion
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    const response = await axios.post('https://api.planity.com/v1/login', {
+      email,
+      password,
+    });
 
-    if (error) {
-      return res.status(401).json({ error: error.message });
+    if (response.status !== 200) {
+      return res.status(response.status).json({ error: response.data.error || 'Login failed' });
     }
 
-    return res.status(200).json(data);
+    res.status(200).json(response.data);
   } catch (error) {
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Error during login:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// Endpoint de création de compte
+app.post('/create-account', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const response = await axios.post('https://api.planity.com/v1/signup', {
+      email,
+      password,
+    });
+
+    if (response.status !== 200) {
+      return res.status(response.status).json({ error: response.data.error || 'Signup failed' });
+    }
+
+    res.status(200).json(response.data);
+  } catch (error) {
+    console.error('Error during account creation:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
