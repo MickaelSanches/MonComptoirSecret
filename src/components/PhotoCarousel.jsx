@@ -26,7 +26,7 @@ const PhotoCarousel = () => {
 
   return (
     <div className="carousel-container mb-8">
-      <style jsx>{`
+      <style>{`
         .carousel-container {
           position: relative;
           width: 100%;

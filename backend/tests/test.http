@@ -1,0 +1,7 @@
+### Test de l'inscription à la newsletter
+POST http://localhost:3000/newsletter
+Content-Type: application/json
+
+{
+    "email": "mickael@example.com"
+}

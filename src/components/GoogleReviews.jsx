@@ -15,7 +15,7 @@ const GoogleReviews = () => {
 
   return (
     <div className="google-reviews-container mb-8 hidden sm:block">
-      <style jsx>{`
+      <style>{`
         .google-reviews-container {
           width: 100%;
           max-width: 700px;
