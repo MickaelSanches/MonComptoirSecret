@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.jsx";
+import NewsTicker from "../components/NewsTicker.jsx";
+import Footer from "../components/Footer.jsx";
+---
+
+<BaseLayout>
+    <NewsTicker />
+    <Header client:load />
+    <main class="p-4 text-black relative">
+        <div class="background-image"></div>
+        <div class="relative z-10 bg-white bg-opacity-90 p-8 rounded-lg shadow-lg max-w-4xl mx-auto retro-frame">
+            <h1 class="text-5xl font-bold mb-6 text-center text-gray-800">404</h1>
+            <h2 class="text-2xl font-semibold mb-6 text-center text-gray-600">Page non trouvée</h2>
+            <div class="flex flex-col items-center">
+                <p class="text-lg mb-4 text-center">
+                    Oups ! Il semble que la page que vous recherchez n'existe pas. Pas de panique, nous sommes là pour vous aider à retrouver votre chemin vers la beauté.
+                </p>
+                <p class="text-lg mb-4 text-center">
+                    Cliquez sur le lien ci-dessous pour revenir à la page d'accueil et découvrir nos services.
+                </p>
+                <a href="/" class="mt-8 inline-block px-4 py-2 bg-primary text-black rounded hover:bg-gray-600">
+                    Retour à la page d'accueil
+                </a>
+            </div>
+        </div>
+        <style>
+            .background-image {
+                background-image: url("/img/institut.webp");
+                background-size: cover;
+                background-position: center;
+                filter: grayscale(100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+            .bg-opacity-90 {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+            .retro-frame {
+                border: 10px solid #d0afa8;
+                border-radius: 15px;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                position: relative;
+                z-index: 1;
+            }
+            .retro-frame h1, .retro-frame h2 {
+                font-family: "Montserrat", sans-serif;
+                color: #333;
+            }
+            .retro-frame p {
+                font-family: "Montserrat", sans-serif;
+                color: #555;
+            }
+        </style>
+    </main>
+    <Footer />
+</BaseLayout>

@@ -18,7 +18,7 @@ import Footer from '../components/Footer.jsx';
         <div id="appointmentContainer" class="p-4 bg-white rounded-lg shadow-md">Prendre RDV</div>
         <div id="giftVoucherContainer" class="p-4 bg-white rounded-lg shadow-md">Cartes Cadeaux</div>
       </div>
-      <script>
+      <script is:inline>
         document.addEventListener("DOMContentLoaded", function() {
           const accountContainer = document.getElementById('accountContainer');
           const appointmentContainer = document.getElementById('appointmentContainer');
@@ -34,12 +34,12 @@ import Footer from '../components/Footer.jsx';
           };
 
           const polyfillScript = document.createElement('script');
-          polyfillScript.src = '/js/polyfills.latest.js';
+          polyfillScript.src = 'https://d2skjte8udjqxw.cloudfront.net/widget/production/2/polyfills.latest.js';
           polyfillScript.async = true;
           document.body.appendChild(polyfillScript);
 
           const appScript = document.createElement('script');
-          appScript.src = '/js/app.latest.js';
+          appScript.src = 'https://d2skjte8udjqxw.cloudfront.net/widget/production/2/app.latest.js';
           appScript.async = true;
           document.body.appendChild(appScript);
         });
@@ -48,3 +48,4 @@ import Footer from '../components/Footer.jsx';
   </main>
   <Footer />
 </BaseLayout>
+

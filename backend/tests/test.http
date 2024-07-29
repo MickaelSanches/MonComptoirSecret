@@ -3,5 +3,22 @@ POST http://localhost:3000/newsletter
 Content-Type: application/json
 
 {
-    "email": "mickael@example.com"
+    "email": "san@example.com"
 }
+
+### Test POST Contact Form
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "message": "Ceci est un message de test pour vérifier le formulaire de contact."
+}
+
+###
+
+### Test GET Config
+GET http://localhost:3000/config
+
+
