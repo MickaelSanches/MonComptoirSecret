@@ -6,22 +6,22 @@
       "use": "@astrojs/vercel/edge"
     },
     {
+      "src": "src/pages/**/*.jsx",
+      "use": "@astrojs/vercel/edge"
+    },
+    {
       "src": "api/**/*.js",
       "use": "@vercel/node"
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "NODE_OPTIONS": "--max-old-space-size=4096"
-  },
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/src/pages/$1"
-    },
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
