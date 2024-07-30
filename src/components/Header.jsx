@@ -23,7 +23,7 @@ const Header = () => {
           <li><a href="/prestations" className="hover:text-gradientStart">Prestations</a></li>
           <li><a href="/histoire" className="hover:text-gradientStart">Histoire</a></li>
           <li><a href="/shop" className="hover:text-gradientStart">Shop</a></li>
-          <li><a href="/espace-client" className="hover:text-gradientStart">Espace Client</a></li>
+          <li><a href="/espace-client" className="hover:text-gradientStart">Prendre RDV</a></li>
           <li><a href="/contact" className="hover:text-gradientStart">Contact</a></li>
         </ul>
       </nav>
