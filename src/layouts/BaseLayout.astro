@@ -59,8 +59,9 @@ import '../styles/global.css';
     <div id="cursor-follower"></div>
     <slot />
     <script 
+	is:inline
 	src="https://static.elfsight.com/platform/platform.js" 
 	data-use-service-core defer></script>
-	<script defer src="/scripts/cursor.js"></script>
+	<script is:inline defer src="/scripts/cursor.js"></script>
 </body>
 </html>

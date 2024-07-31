@@ -3,8 +3,7 @@ const GoogleMap = ({ lat, lng, apiKey }) => {
     <div className="map-container mt-4 mx-auto hidden xs:block" >
         <iframe
         width="500px"
-        height="100px"
-        frameBorder="0"
+        height="300px"
         style={{ border: 0 }}
         src={`https://www.google.com/maps/embed/v1/view?key=${apiKey}&center=${lat},${lng}&zoom=18`}
         allowFullScreen

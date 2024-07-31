@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GoogleMap from '../components/GoogleMap.jsx';
 
-const mapCoordinates = { lat: 45.69775390625, lng: 5.905280113220215 };
+const mapCoordinates = { lat: 45.6975391, lng: 5.9054093 };
 const googleApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const Footer = () => {
