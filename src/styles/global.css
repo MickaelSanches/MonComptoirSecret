@@ -60,41 +60,7 @@ textarea:hover~#cursor-follower,
     transform: scale(1.5);
 }
 
-/* Styles Planity */
-:root {
-    --primaryColor: #F4D7CF;
-}
-
-.planity_appointment_service_button,
-.planity_ui_action_button_root,
-.planity_ui_action_button_icon-remove,
-.planity_ui_button_root,
-.planity_ui_showMoreservices,
-.react-add-to-calendar__icon-window.planity.primaryColors,
-.planity_ui_action_cancel-appointment-window.planity.primaryColors,
-.planity_ui_action_edit-password
-{
-    color: var(--primaryColor) !important;
-}
-
-.planity_ui_button_root {
-    background-color: var(--primaryColor) !important;
-    color: #000 !important; /* Couleur de texte souhaitée */
-}
-
-.planity_appointment_service_button {
-    background-color: var(--primaryColor) !important;
-    color: #000 !important; /* Couleur de texte souhaitée */
-}
-.planity_ui_action_edit-password {
-    background-color: var(--primaryColor) !important;
-    color: #000 !important; /* Couleur de texte souhaitée */
-}
-
-.planity_appointment_steps_step {
-    background-color: var(--primaryColor) !important;
-    color: #000 !important; /* Couleur de texte souhaitée */
-}
+/* Popup */
 
 @keyframes popup {
     0% {

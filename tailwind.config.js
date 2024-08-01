@@ -11,12 +11,12 @@ export default {
       },
       colors: {
         primary: '#F4D7CF',
-        gradientStart: '#D0AFA8',
+        gradientStart: '#F4D7CF',
         gradientEnd: '#FFFFFF',
       },
       backgroundImage: {
-        'gradient-header': 'linear-gradient(to right, #D0AFA8, #FFFFFF)',
-        'gradient-footer': 'linear-gradient(to left, #D0AFA8, #FFFFFF)',
+        'gradient-header': 'linear-gradient(to right, #F4D7CF, #FFFFFF)',
+        'gradient-footer': 'linear-gradient(to left, #F4D7CF, #FFFFFF)',
       },
       screens: {
         'xs': '700px',

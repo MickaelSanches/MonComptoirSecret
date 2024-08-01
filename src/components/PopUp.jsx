@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const PromoPopup = () => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        if (window.location.pathname === "/") {
+            setIsVisible(true);
+        }
+    }, []);
 
     const closePopup = () => {
-    setIsVisible(false);
+        setIsVisible(false);
     };
 
     return (
