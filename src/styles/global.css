@@ -41,7 +41,8 @@ textarea,
 .map-iframe,
 .google-reviews-container,
 .google-reviews-content,
-.cookie-banner .btn {
+.cookie-banner .btn,
+.popup-container .btn {
     cursor: none;
 }
 
@@ -54,8 +55,9 @@ textarea:hover~#cursor-follower,
 .map-iframe:hover~#cursor-follower,
 .google-reviews-container:hover~#cursor-follower,
 .google-reviews-content:hover~#cursor-follower,
-.cookie-banner .btn:hover~#cursor-follower {
-        transform: scale(1.5);
+.cookie-banner .btn:hover~#cursor-follower,
+.popup-container .btn:hover~#cursor-follower {
+    transform: scale(1.5);
 }
 
 /* Styles Planity */
