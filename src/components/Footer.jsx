@@ -42,6 +42,8 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-4">Localisation</h4>
           <div className="container mx-auto mt-8">
+            <p>4 Chemin en calloud</p>
+            <p>73100 Aix-les-bains</p>
             <GoogleMap lat={mapCoordinates.lat} lng={mapCoordinates.lng} apiKey={googleApiKey} />
           </div>
         </div>
