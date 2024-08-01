@@ -48,6 +48,7 @@ const Footer = () => {
       </div>
       <div className="text-center mt-8">
         <p>© Mon Comptoir Secret. Tous droits réservés.</p>
+        <p><a href="/privacy-policy" className="hover:text-gradientStart">Politique de confidentialité</a></p>
       </div>
     </footer>
   );

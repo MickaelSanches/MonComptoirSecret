@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<BaseLayout>
+  <Header client:load />
+  <main class="p-4 text-black">
+    <h1 class="text-3xl font-bold mb-6 text-center">Politique de confidentialité</h1>
+    <section class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <p>
+        Votre confidentialité est importante pour nous. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons et les choix que vous avez concernant vos informations personnelles.
+      </p>
+      <h2 class="text-2xl font-bold mt-6 mb-4">Collecte des informations</h2>
+      <p>
+        Nous collectons des informations lorsque vous vous inscrivez sur notre site, passez une commande, vous abonnez à notre newsletter ou remplissez un formulaire.
+      </p>
+      <h2 class="text-2xl font-bold mt-6 mb-4">Utilisation des informations</h2>
+      <p>
+        Les informations que nous collectons peuvent être utilisées pour personnaliser votre expérience, améliorer notre site web, améliorer le service client, traiter les transactions et envoyer des emails périodiques.
+      </p>
+      <h2 class="text-2xl font-bold mt-6 mb-4">Sécurité</h2>
+      <p>
+        Nous mettons en œuvre diverses mesures de sécurité pour maintenir la sécurité de vos informations personnelles.
+      </p>
+      <h2 class="text-2xl font-bold mt-6 mb-4">Cookies</h2>
+      <p>
+        Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser notre trafic.
+      </p>
+      <h2 class="text-2xl font-bold mt-6 mb-4">Consentement</h2>
+      <p>
+        En utilisant notre site, vous consentez à notre politique de confidentialité.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

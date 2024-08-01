@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/Cookie.jsx';
+
 ---
 
 <html lang="fr">
@@ -57,6 +59,7 @@ import '../styles/global.css';
 <body class="font-montserrat text-[#F4D7CF] bg-grey">
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
+	<CookieBanner client:load />
     <slot />
     <script 
 	is:inline
