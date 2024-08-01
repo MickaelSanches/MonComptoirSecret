@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import CookieBanner from '../components/Cookie.jsx';
 import Popup from '../components/PopUp.jsx';
-
+import BackToTop from '../components/BackToTop.jsx';
 ---
 
 <html lang="fr">
@@ -57,12 +57,13 @@ import Popup from '../components/PopUp.jsx';
     <script 
 	defer src="/scripts/cursor.js"></script>
 </head>
-<body class="font-montserrat text-[#F4D7CF] bg-grey">
+<body class="font-avenir text-[#F4D7CF] bg-grey">
 	<Popup client:load/>
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
 	<CookieBanner client:load />
     <slot />
+	<BackToTop client:load />
     <script 
 	is:inline
 	src="https://static.elfsight.com/platform/platform.js" 

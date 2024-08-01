@@ -5,9 +5,17 @@
 
 /* Custom styles */
 body {
-    @apply font-montserrat text-primary;
+    @apply text-primary;
+    font-family: 'Avenir Next', sans-serif;
     cursor: none;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ITC Caslon No 224', serif;
+}
+
+p {
+    font-family: 'Avenir Next', sans-serif;
 }
 
 #cursor,

@@ -17,14 +17,14 @@ const Header = () => {
           className="w-60 h-auto"
         />
       </a>
-      <nav className="hidden md:flex space-x-4 text-black mr-4">
+      <nav className="hidden md:flex space-x-4 text-gray-800 text-sm mr-4">
         <ul className="flex space-x-4">
-          <li><a href="/" className="hover:text-gradientStart">Accueil</a></li>
-          <li><a href="/prestations" className="hover:text-gradientStart">Prestations</a></li>
-          <li><a href="/histoire" className="hover:text-gradientStart">Histoire</a></li>
-          <li><a href="/shop" className="hover:text-gradientStart">Shop</a></li>
-          <li><a href="/espace-client" className="hover:text-gradientStart">Prendre RDV</a></li>
-          <li><a href="/contact" className="hover:text-gradientStart">Contact</a></li>
+          <li><a href="/" className="hover:text-buton tracking-wide">ACCUEIL</a></li>
+          <li><a href="/prestations" className="hover:text-buton tracking-wide">PRESTATIONS</a></li>
+          <li><a href="/histoire" className="hover:text-buton tracking-wide">HISTOIRE</a></li>
+          <li><a href="/shop" className="hover:text-buton tracking-wide">SHOP</a></li>
+          <li><a href="/espace-client" className="hover:text-buton tracking-wide">PRENDRE RDV</a></li>
+          <li><a href="/contact" className="hover:text-buton tracking-wide">CONTACT</a></li>
         </ul>
       </nav>
       <div className="md:hidden mr-4">
@@ -37,12 +37,12 @@ const Header = () => {
           <span className={`block w-full h-0.5 bg-current transform transition duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
         <nav className={`absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 transform transition duration-300 ease-in-out z-50 ${isOpen ? 'scale-100' : 'scale-0'}`}>
-          <a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Accueil</a>
-          <a href="/prestations" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Prestations</a>
-          <a href="/histoire" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Histoire</a>
-          <a href="/shop" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Shop</a>
-          <a href="/espace-client" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Espace Client</a>
-          <a href="/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
+          <a href="/" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">ACCUEIL</a>
+          <a href="/prestations" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRESTATIONS</a>
+          <a href="/histoire" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">HISTOIRE</a>
+          <a href="/shop" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">SHOP</a>
+          <a href="/espace-client" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRENDRE RDV</a>
+          <a href="/contact" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">CONTACT</a>
         </nav>
       </div>
     </header>

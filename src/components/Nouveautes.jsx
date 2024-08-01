@@ -20,8 +20,8 @@ const Nouveautes = () => {
 
   return (
     <section className="nouveautes-section mb-8 mt-16 relative w-full">
-      <h2 className="text-2xl font-bold mb-4 text-center text-black">Nouveautés</h2>
-      <p className="mb-4 text-center text-black">
+      <h2 className="tracking-wider text-2xl mb-4 text-center text-gray-800">NOUVEAUTÉS</h2>
+      <p className="mb-4 text-center text-gray-800">
         Découvrez les dernières nouveautés et promotions de notre institut. Profitez de nos nouvelles offres et soins exclusifs !
       </p>
       <div className="nouveautes-container relative w-full">

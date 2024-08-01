@@ -6,13 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      letterSpacing: {
+        wider: '0.05em',
+      },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        caslon: ['"ITC Caslon No 224"', 'serif'],
+        avenir: ['"Avenir Next"', 'sans-serif'],
       },
       colors: {
         primary: '#F4D7CF',
         gradientStart: '#F4D7CF',
         gradientEnd: '#FFFFFF',
+        buton: '#d0afa8'
       },
       backgroundImage: {
         'gradient-header': 'linear-gradient(to right, #F4D7CF, #FFFFFF)',
