@@ -36,7 +36,7 @@ const PromoPopup = () => {
                 />
             </svg>
             </button>
-            <video className="mb-4 mx-auto" autoPlay loop muted>
+            <video controls loading="lazy" className="mb-4 mx-auto" autoPlay loop muted>
                         <source src="/img/nouveaute.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

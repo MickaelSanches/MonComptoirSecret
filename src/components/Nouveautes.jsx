@@ -68,11 +68,11 @@ const Nouveautes = () => {
           {nouveautesItems.map((item, index) => (
             item.type === 'image' ? (
               <div key={index} className="nouveautes-slide">
-                <img src={item.src} alt={`Slide ${index}`} className="nouveautes-image" />
+                <img src={item.src} loading="lazy" alt={`Slide ${index}`} className="nouveautes-image" />
               </div>
             ) : (
               <div key={index} className="nouveautes-slide">
-                <video src={item.src} autoPlay loop muted className="nouveautes-video" />
+                <video src={item.src} loading="lazy" autoPlay loop muted className="nouveautes-video" />
               </div>
             )
           ))}

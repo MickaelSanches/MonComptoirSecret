@@ -24,17 +24,17 @@ const Footer = () => {
           <ul className="">
             <li>
               <a href="https://www.instagram.com/moncomptoirsecret/" className="hover:text-gradientStart">
-                <img src="/icon/instagram.webp" alt="Instagram" className="w-8 h-8" /> Instagram
+                <img src="/icon/instagram.webp" loading="lazy" alt="Instagram" className="w-8 h-8" /> Instagram
               </a>
             </li>
             <li>
               <a href="https://www.facebook.com/profile.php?id=100093637038994" className="hover:text-gradientStart">
-                <img src="/icon/facebook.webp" alt="Facebook" className="w-8 h-8" /> Facebook
+                <img src="/icon/facebook.webp" loading="lazy" alt="Facebook" className="w-8 h-8" /> Facebook
               </a>
             </li>
             <li>
               <a href="https://www.tiktok.com/@moncomptoirsecret?lang=fr" className="hover:text-gradientStart">
-                <img src="/icon/tiktok.webp" alt="TikTok" className="w-8 h-8" /> TikTok
+                <img src="/icon/tiktok.webp" loading="lazy" alt="TikTok" className="w-8 h-8" /> TikTok
               </a>
             </li>
           </ul>
