@@ -19,7 +19,7 @@ const Nouveautes = () => {
   }, []);
 
   return (
-    <section className="nouveautes-section p-4 mb-8 relative w-full">
+    <section className="nouveautes-section mb-8 mt-16 relative w-full">
       <h2 className="text-2xl font-bold mb-4 text-center text-black">Nouveautés</h2>
       <p className="mb-4 text-center text-black">
         Découvrez les dernières nouveautés et promotions de notre institut. Profitez de nos nouvelles offres et soins exclusifs !
@@ -28,11 +28,9 @@ const Nouveautes = () => {
         <style>{`
           .nouveautes-container {
             position: relative;
-            width: 100%;
+            width: 100vw;
             height: auto;
-            margin: auto;
             overflow: hidden;
-            border-radius: 10px;
           }
 
           .nouveautes-carousel {
@@ -43,25 +41,17 @@ const Nouveautes = () => {
           }
 
           .nouveautes-slide {
-            min-width: 100%;
+            min-width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             height: auto;
           }
 
-          .nouveautes-image {
+          .nouveautes-image, .nouveautes-video {
             width: 100%;
             height: auto;
-            object-fit: contain;
-            border-radius: 15px;
-          }
-
-          .nouveautes-video {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 15px;
+            object-fit: cover;
           }
         `}</style>
         <div className="nouveautes-carousel">

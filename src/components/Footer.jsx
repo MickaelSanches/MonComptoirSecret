@@ -7,11 +7,11 @@ const googleApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 const Footer = () => {
   return (
     <footer className="bg-gradient-footer p-8 text-black">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
           <h4 className="font-bold mb-4">Mon Comptoir Secret</h4>
           <ul>
-          <li><a href="/" className="hover:text-gradientStart">Accueil</a></li>
+            <li><a href="/" className="hover:text-gradientStart">Accueil</a></li>
             <li><a href="/prestations" className="hover:text-gradientStart">Prestations</a></li>
             <li><a href="/histoire" className="hover:text-gradientStart">Histoire</a></li>
             <li><a href="/shop" className="hover:text-gradientStart">Shop</a></li>
@@ -21,20 +21,20 @@ const Footer = () => {
         </div>
         <div>
           <h4 className="font-bold mb-4">Suivez-nous</h4>
-          <ul className="">
+          <ul>
             <li>
               <a href="https://www.instagram.com/moncomptoirsecret/" className="hover:text-gradientStart">
-                <img src="/icon/instagram.webp" loading="lazy" alt="Instagram" className="w-8 h-8" /> Instagram
+                <img src="/icon/instagram.webp" loading="lazy" alt="Instagram" className="w-8 h-8 mx-auto md:mx-0" /> Instagram
               </a>
             </li>
             <li>
               <a href="https://www.facebook.com/profile.php?id=100093637038994" className="hover:text-gradientStart">
-                <img src="/icon/facebook.webp" loading="lazy" alt="Facebook" className="w-8 h-8" /> Facebook
+                <img src="/icon/facebook.webp" loading="lazy" alt="Facebook" className="w-8 h-8 mx-auto md:mx-0" /> Facebook
               </a>
             </li>
             <li>
               <a href="https://www.tiktok.com/@moncomptoirsecret?lang=fr" className="hover:text-gradientStart">
-                <img src="/icon/tiktok.webp" loading="lazy" alt="TikTok" className="w-8 h-8" /> TikTok
+                <img src="/icon/tiktok.webp" loading="lazy" alt="TikTok" className="w-8 h-8 mx-auto md:mx-0" /> TikTok
               </a>
             </li>
           </ul>
@@ -42,7 +42,7 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-4">Localisation</h4>
           <div className="container mx-auto mt-8">
-            <p>4 Chemin en calloud</p>
+            <p>4 Chemin en Calloud</p>
             <p>73100 Aix-les-bains</p>
             <GoogleMap lat={mapCoordinates.lat} lng={mapCoordinates.lng} apiKey={googleApiKey} />
           </div>
