@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const carouselImages = [
   '/img/7.webp',
@@ -13,6 +13,13 @@ const carouselImages = [
 
 const PhotoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const prevSlide = () => {
     const index = currentIndex === 0 ? carouselImages.length - 1 : currentIndex - 1;
@@ -51,9 +58,9 @@ const PhotoCarousel = () => {
         }
 
         .carousel-image {
-          width: auto;
+          width: 100%;
           height: 500px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .carousel-button {

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import CookieBanner from '../components/Cookie.jsx';
+import Popup from '../components/PopUp.jsx';
 
 ---
 
@@ -57,6 +58,7 @@ import CookieBanner from '../components/Cookie.jsx';
 	defer src="/scripts/cursor.js"></script>
 </head>
 <body class="font-montserrat text-[#F4D7CF] bg-grey">
+	<Popup client:load/>
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
 	<CookieBanner client:load />

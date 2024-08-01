@@ -36,7 +36,7 @@ a,
 button,
 input,
 textarea,
-.photo-carousel-button,
+.carousel-button,
 .map-container,
 .map-iframe,
 .google-reviews-container,
@@ -49,7 +49,7 @@ a:hover~#cursor-follower,
 button:hover~#cursor-follower,
 input:hover~#cursor-follower,
 textarea:hover~#cursor-follower,
-.photo-carousel-button:hover~#cursor-follower,
+.carousel-button:hover~#cursor-follower,
 .map-container:hover~#cursor-follower,
 .map-iframe:hover~#cursor-follower,
 .google-reviews-container:hover~#cursor-follower,
@@ -94,3 +94,17 @@ textarea:hover~#cursor-follower,
     color: #000 !important; /* Couleur de texte souhaitée */
 }
 
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-popup {
+    animation: popup 0.5s ease-in-out;
+}
