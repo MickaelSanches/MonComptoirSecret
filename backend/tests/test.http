@@ -3,7 +3,7 @@ POST http://localhost:3000/newsletter
 Content-Type: application/json
 
 {
-    "email": "san@example.com"
+    "email": "sanoc@example.com"
 }
 
 ### Test POST Contact Form
