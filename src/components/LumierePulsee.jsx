@@ -86,6 +86,7 @@ const LumierePulsee = () => {
         <div className="category-section" data-aos="fade-up">
         <div className="content-frame">
             <img
+            loading="lazy"
             src="/img/epilation4.webp"
             alt="Introduction Lumière Pulsée"
             className="section-image image-top-left"
@@ -106,6 +107,7 @@ const LumierePulsee = () => {
         <div className="category-section" data-aos="fade-up">
         <div className="content-frame">
             <img
+            loading="lazy"
             src="/img/epilation6.webp"
             alt="Qu'est-ce que la Lumière Pulsée"
             className="section-image image-bottom-right"
@@ -126,6 +128,7 @@ const LumierePulsee = () => {
         <div className="category-section" data-aos="fade-up">
         <div className="content-frame">
             <img
+            loading="lazy"
             src="/img/epilation5.webp"
             alt="Avantages de la Lumière Pulsée"
             className="section-image image-top-left"
@@ -148,6 +151,7 @@ const LumierePulsee = () => {
         <div className="category-section" data-aos="fade-up">
         <div className="content-frame">
             <img
+            loading="lazy"
             src="/img/epilation3.webp"
             alt="Applications de la Lumière Pulsée"
             className="section-image image-bottom-right"
@@ -168,6 +172,7 @@ const LumierePulsee = () => {
         <div className="category-section" data-aos="fade-up">
         <div className="content-frame">
             <img
+            loading="lazy"
             src="/img/epilation7.webp"
             alt="Sécurité et Précautions"
             className="section-image image-top-left"
