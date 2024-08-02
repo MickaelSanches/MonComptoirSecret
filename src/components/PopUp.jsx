@@ -13,10 +13,6 @@ const PromoPopup = () => {
         setIsVisible(false);
     };
 
-    const isIOS = () => {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    };
-
     return (
         isVisible && (
             <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black bg-opacity-50 transition-opacity duration-500 ease-in-out">
@@ -41,23 +37,14 @@ const PromoPopup = () => {
                         </svg>
                     </button>
                     <div className="video-container mb-4 mx-auto cursor-none" style={{ maxHeight: '600px' }}>
-                        {isIOS() ? (
-                            <button
-                                onClick={() => document.getElementById("promo-video").play()}
-                                className="absolute inset-0 bg-black bg-opacity-50 text-white flex items-center justify-center"
-                                style={{ zIndex: 10 }}
-                            >
-                                Play Video
-                            </button>
-                        ) : null}
                         <video
                             id="promo-video"
                             controls
                             className="w-full cursor-none"
                             style={{ maxHeight: '600px' }}
-                            autoPlay={!isIOS()}
+                            autoPlay
                             loop
-                            muted={!isIOS()}
+                            muted
                         >
                             <source src="/img/nouveaute.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
