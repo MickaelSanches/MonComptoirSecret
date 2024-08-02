@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const nouveautesItems = [
-  { type: 'video', src: '/img/epilation.mp4' },
+  { type: 'video', src: '/img/Home.mp4' },
   { type: 'image', src: '/img/epilation1.webp' },
   { type: 'image', src: '/img/epilation2.webp' },
   { type: 'image', src: '/img/epilation3.webp' },
@@ -53,6 +53,49 @@ const Nouveautes = () => {
             height: auto;
             object-fit: cover;
           }
+
+          .btn-light-therapy {
+            position: absolute;
+            bottom: 50%;
+            left: 35%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 14px;
+            transition: all 0.3s ease;
+          }
+
+          .btn-light-therapy:hover {
+            background-color: #d0afa8;
+          }
+
+          @media (max-width: 600px) {
+            .btn-light-therapy {
+              bottom: 45%;
+              left: 32%;
+              padding: 5px 10px;
+              font-size: 10px;
+            }
+          }
+
+          @media (min-width: 600px) and (max-width: 1024px) {
+            .btn-light-therapy {
+              padding: 8px 16px;
+              font-size: 12px;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            .btn-light-therapy {
+              padding: 10px 20px;
+              font-size: 14px;
+            }
+          }
         `}</style>
         <div className="nouveautes-carousel">
           {nouveautesItems.map((item, index) => (
@@ -61,8 +104,11 @@ const Nouveautes = () => {
                 <img src={item.src} loading="lazy" alt={`Slide ${index}`} className="nouveautes-image" />
               </div>
             ) : (
-              <div key={index} className="nouveautes-slide">
+              <div key={index} className="nouveautes-slide relative">
                 <video src={item.src} loading="lazy" autoPlay loop muted className="nouveautes-video" />
+                {item.src === '/img/Home.mp4' && (
+                  <a href="/lumiere-pulsee" className="btn-light-therapy">En savoir plus</a>
+                )}
               </div>
             )
           ))}

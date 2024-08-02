@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsTicker from '../components/NewsTicker.jsx';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+import IPL from '../components/LumierePulsee.jsx';
+---
+
+<BaseLayout>
+    <NewsTicker client:load />
+    <Header client:load />
+    <main class="p-4 text-black">
+        <IPL client:load />
+    </main>
+    <Footer />
+</BaseLayout>

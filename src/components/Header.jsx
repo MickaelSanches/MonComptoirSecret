@@ -23,6 +23,7 @@ const Header = () => {
           <li><a href="/prestations" className="hover:text-buton tracking-wide">PRESTATIONS</a></li>
           <li><a href="/histoire" className="hover:text-buton tracking-wide">HISTOIRE</a></li>
           <li><a href="/shop" className="hover:text-buton tracking-wide">SHOP</a></li>
+          <li><a href="/lumiere-pulsee" className="hover:text-buton tracking-wide">LUMIÈRE PULSÉE</a></li>
           <li><a href="/espace-client" className="hover:text-buton tracking-wide">PRENDRE RDV</a></li>
           <li><a href="/contact" className="hover:text-buton tracking-wide">CONTACT</a></li>
         </ul>
@@ -41,6 +42,7 @@ const Header = () => {
           <a href="/prestations" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRESTATIONS</a>
           <a href="/histoire" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">HISTOIRE</a>
           <a href="/shop" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">SHOP</a>
+          <a href="/lumiere-pulsee" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">LUMIÈRE PULSÉE</a>
           <a href="/espace-client" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRENDRE RDV</a>
           <a href="/contact" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">CONTACT</a>
         </nav>
