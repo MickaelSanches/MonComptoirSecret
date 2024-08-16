@@ -16,7 +16,7 @@ const PromoPopup = () => {
     return (
         isVisible && (
             <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black bg-opacity-50 transition-opacity duration-500 ease-in-out">
-                <div className="relative bg-white mt-16 shadow-lg max-w-xs md:max-w-md text-center animate-popup w-10/12 sm:w-8/12 md:w-auto cursor-none mx-4 transform translate-y-[-5%]">
+                <div className="relative bg-white p-1 mt-16 shadow-lg max-w-xs md:max-w-md text-center animate-popup w-10/12 sm:w-8/12 md:w-auto cursor-none mx-4 transform translate-y-[-5%]">
                     <button
                         onClick={closePopup}
                         className="absolute top-[-20px] right-[-20px] text-black bg-white p-2 shadow-lg hover:bg-gray-300 transition-all cursor-none"
