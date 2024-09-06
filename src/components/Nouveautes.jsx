@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const nouveautesItems = [
-  { type: 'video', src: '/img/Home.mp4' },
   { type: 'image', src: '/img/epilation8.webp' },
+  { type: 'video', src: '/img/Home.mp4' },
   { type: 'image', src: '/img/epilation3.webp' },
 ];
 
