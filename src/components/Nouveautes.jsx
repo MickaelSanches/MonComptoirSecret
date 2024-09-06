@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const nouveautesItems = [
-  { type: 'image', src: '/img/epilation8.webp' },
-  { type: 'video', src: '/img/Home.mp4' },
-  { type: 'image', src: '/img/epilation3.webp' },
+  { type: 'video', src: '/img/Home1.mp4' },
 ];
 
 const Nouveautes = () => {
@@ -12,17 +10,13 @@ const Nouveautes = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex === nouveautesItems.length - 1 ? 0 : prevIndex + 1));
-    }, 5000); // Change item every 5 seconds
+    }, 14000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="nouveautes-section mb-8 mt-16 relative w-full">
-      <h2 className="tracking-wider text-2xl mb-4 text-center text-gray-800">NOUVEAUTÉS</h2>
-      <p className="mb-4 text-center text-gray-800">
-        Découvrez les dernières nouveautés et promotions de notre institut. Profitez de nos nouvelles offres et soins exclusifs !
-      </p>
+    <section className="nouveautes-section mb-8 relative w-full">
       <div className="nouveautes-container relative w-full">
         <style>{`
           .nouveautes-container {
@@ -47,7 +41,7 @@ const Nouveautes = () => {
             height: auto;
           }
 
-          .nouveautes-image, .nouveautes-video {
+          .nouveautes-video {
             width: 100%;
             height: auto;
             object-fit: cover;
@@ -55,17 +49,17 @@ const Nouveautes = () => {
 
           .btn-light-therapy {
             position: absolute;
-            bottom: 50%;
-            left: 35%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
+            bottom: 30%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            padding: 15px 40px;
             background-color: transparent;
             color: #fff;
             border: 1px solid #fff;
-            cursor: pointer;
+            cursor: none;
             text-align: center;
             white-space: nowrap;
-            font-size: 14px;
+            font-size: 18px;
             transition: all 0.3s ease;
           }
 
@@ -75,24 +69,22 @@ const Nouveautes = () => {
 
           @media (max-width: 600px) {
             .btn-light-therapy {
-              bottom: 45%;
-              left: 32%;
-              padding: 5px 10px;
-              font-size: 10px;
+              padding: 8px 15px;
+              font-size: 12px;
             }
           }
 
           @media (min-width: 600px) and (max-width: 1024px) {
             .btn-light-therapy {
-              padding: 8px 16px;
-              font-size: 12px;
+              padding: 10px 25px;
+              font-size: 16px;
             }
           }
 
           @media (min-width: 1024px) {
             .btn-light-therapy {
-              padding: 10px 20px;
-              font-size: 14px;
+              padding: 15px 40px;
+              font-size: 18px;
             }
           }
         `}</style>
@@ -105,7 +97,7 @@ const Nouveautes = () => {
             ) : (
               <div key={index} className="nouveautes-slide relative">
                 <video src={item.src} loading="lazy" autoPlay loop muted className="nouveautes-video" />
-                {item.src === '/img/Home.mp4' && (
+                {item.src === '/img/Home1.mp4' && (
                   <a href="/lumiere-pulsee" className="btn-light-therapy">En savoir plus</a>
                 )}
               </div>
