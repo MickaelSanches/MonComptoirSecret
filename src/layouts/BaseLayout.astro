@@ -60,11 +60,19 @@ import BackToTop from '../components/BackToTop.jsx';
 	<script type="application/ld+json">
 		{
 		"@context": "https://schema.org",
-		"@type": "Organization",
+		"@type": "LocalBusiness",
 		"name": "Mon Comptoir Secret",
-		"url": "https://moncomptoirsecret.com",
-		"logo": "https://moncomptoirsecret.com/img/logomcs1.webp",
-		"description": "Institut de beauté offrant des prestations comme l'épilation définitive et le photorajeunissement.",
+		"image": "https://moncomptoirsecret.com/img/logomcs.webp",
+		"description": "Institut de beauté offrant des soins esthétiques, épilation définitive et photorajeunissement.",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "4 Chemin en Calloud",
+			"addressLocality": "Aix-les-Bains",
+			"addressRegion": "Savoie",
+			"postalCode": "73100"
+			},
+		"telephone": "+33 6 17 34 49 99",
+		"openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
 		"sameAs": [
 			"https://www.instagram.com/moncomptoirsecret",
 			"https://www.facebook.com/moncomptoirsecret"

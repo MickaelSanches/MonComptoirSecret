@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsTicker from '../components/NewsTicker.jsx';
+import Header from '../components/Header.jsx';
+import FAQ from '../components/FAQ.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<BaseLayout>
+    <NewsTicker client:load />
+  <Header client:load />
+  <main class="p-6 text-black space-y-8 max-w-5xl mx-auto">
+    <h1 class="tracking-wider text-3xl mb-16 text-center text-gray-800">TOUT SAVOIR SUR L'ÉPILATION DÉFINITIVE À LA LUMIÈRE PULSÉE</h1>
+
+    <section class="space-y-4">
+        <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Qu'est-ce que l'épilation à la lumière pulsée ?</h2>
+      <p class="text-lg">
+        L'épilation à la lumière pulsée (IPL) est une technique avancée, non invasive, qui utilise des impulsions de lumière pour cibler la mélanine présente dans les follicules pileux. Cette méthode chauffe et détruit les follicules responsables de la repousse des poils, offrant ainsi une réduction durable et significative de la pilosité.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Comparaison avec d'autres méthodes :</h2>
+        <p class="text-lg">
+            Contrairement au laser, qui utilise une longueur d'onde unique, l'IPL diffuse plusieurs longueurs d'onde, permettant de traiter une plus large gamme de types de peau et de couleurs de poils. L'épilation à la lumière pulsée est également plus douce que le laser en termes d'intensité lumineuse, bien qu'elle nécessite souvent plus de séances pour des résultats optimaux. Comparé au rasage ou à la cire, l'IPL réduit la fréquence des traitements à long terme.
+        </p>
+        <img loading="lazy" src="/img/machine.webp" alt="Les bénéfices de l'épilation à la lumière pulsée" class="w-full rounded-lg shadow-md object-cover">
+      </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Les avantages de l'épilation à la lumière pulsée</h2>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li><u>Durabilité des résultats :</u> Avec l'épilation à la lumière pulsée, les follicules pileux sont endommagés de manière à empêcher leur régénération, ce qui entraîne une diminution permanente de la pilosité. Dès la première, vous constaterez une réduction significative de la repousse des poils.</li>
+        <li><u>Moins d'irritations cutanées :</u> Contrairement au rasage ou à l'épilation à la cire, l'IPL réduit les irritations, les coupures ou les poils incarnés. C'est une option idéale pour les personnes ayant la peau sensible.</li>
+        <li><u>Économies à long terme :</u> Bien que l'IPL nécessite un investissement initial plus élevé que les méthodes temporaires, la réduction permanente des poils élimine le besoin de traitements réguliers coûteux, comme les rasoirs ou la cire.</li>
+        <li><u>Polyvalence :</u> L'IPL peut être utilisée sur presque toutes les zones du corps : jambes, bras, aisselles, visage, maillot, etc. Elle convient également à différents types de peau et couleurs de poils, bien qu'elle soit particulièrement efficace sur les poils foncés sur une peau claire.</li>
+      </ul>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Le déroulement d'une séance d'épilation définitive</h2>
+      <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Avant la séance :</h3>
+      <p class="text-lg">
+        Il est recommandé de raser la zone à traiter 24 heures avant la séance pour optimiser les résultats. Ne vous exposez pas au soleil et évitez les autobronzants.
+      </p>
+
+      <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Pendant la séance :</h3>
+      <p class="text-lg">
+        L'esthéticienne applique un gel frais sur la zone ciblée pour améliorer la transmission de la lumière et protéger la peau. L'appareil IPL envoie des flashs lumineux qui pénètrent la peau pour cibler la mélanine dans les follicules pileux. Vous pouvez ressentir une légère chaleur, mais le traitement est généralement indolore.
+      </p>
+
+      <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Après la séance :</h3>
+      <p class="text-lg">
+        Il est essentiel de bien hydrater la peau et d'éviter toute exposition au soleil pendant quelques jours. Appliquez une crème solaire SPF élevé pour protéger la peau des rayons UV.
+      </p>
+      <img loading="lazy" src="/img/APep.webp" alt="Avant après séance d'épilation à la lumière pulsée" class="w-full rounded-lg shadow-md object-cover">
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Combien de séances sont nécessaires ?</h2>
+      <p class="text-lg">
+        En moyenne, 6 à 8 séances espacées de 6 à 8 semaines sont recommandées pour obtenir des résultats durables. Cela peut varier en fonction de la zone traitée, de la couleur des poils, du type de peau et de la densité des poils. Certaines zones, comme les aisselles ou le maillot, réagissent plus rapidement, tandis que d'autres zones peuvent nécessiter plus de séances.
+      </p>
+      
+      <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Séances d'entretien :</h3>
+      <p class="text-lg">
+        Il est nécessaire d'effectuer des séances d'entretien annuelles ou semi-annuelles pour maintenir des résultats optimaux.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Précautions à prendre avant et après le traitement</h2>
+      <p class="text-lg">
+        Bien que l'IPL soit généralement sûr, il est important de respecter certaines précautions pour éviter les effets secondaires. Avant chaque séance, évitez l'exposition au soleil et ne vous épilez pas à la cire ou à l'épilateur (seul le rasage est autorisé). Après le traitement, il est normal d'observer des rougeurs légères, similaires à un coup de soleil. Ces effets disparaissent généralement en quelques heures.
+      </p>
+      <p class="text-lg">
+        Les effets secondaires sont rares, mais peuvent inclure des rougeurs temporaires ou une légère sensibilité de la peau. Ces effets disparaissent généralement en quelques heures.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">L'épilation à la lumière pulsée est-elle faite pour vous ?</h2>
+      <p class="text-lg">
+        Ce traitement convient à ceux qui recherchent une solution à long terme pour se débarrasser de la pilosité. Toutefois, avant de commencer un traitement, il est conseillé de prendre rendez-vous pour un bilan personnalisé <strong><u><i>offert</i></u></strong> afin de déterminer si cette méthode vous convient.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Conclusion</h2>
+        <p class="text-lg">
+            L'épilation à la lumière pulsée est une méthode révolutionnaire et non invasive qui vous permet de dire adieu aux poils indésirables de façon durable. Avec ses nombreux avantages et sa polyvalence, elle représente une excellente alternative aux méthodes traditionnelles. Si vous êtes fatigué des rasages réguliers ou des séances de cire, ce traitement est idéal pour vous. Prenez rendez-vous dès maintenant pour un bilan <strong><u><i>offert</i></u></strong> et découvrez les avantages de l'IPL dans notre institut.
+        </p>
+      </section>
+
+    <section class="text-center mt-8">
+      <a href="/espace-client" class="inline-block bg-gradient-footer text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-header transition-all">Prenez rendez-vous pour un bilan OFFERT</a>
+    </section>
+
+  </main>
+  <section>
+    <FAQ client:load />
+</section>
+  <Footer />
+</BaseLayout>

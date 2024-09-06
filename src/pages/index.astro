@@ -6,6 +6,7 @@ import Nouveautes from '../components/Nouveautes.jsx';
 import HistoireEstelle from '../components/HistoireEstelle.jsx';
 import PhotoCarousel from '../components/PhotoCarousel.jsx';
 import GoogleReviews from '../components/GoogleReviews.jsx';
+import FAQ from '../components/FAQ.jsx';
 import Footer from '../components/Footer.jsx';
 
 ---
@@ -25,6 +26,9 @@ import Footer from '../components/Footer.jsx';
 		</section>
 		<section>
 			<GoogleReviews client:load />
+		</section>
+		<section>
+			<FAQ client:load />
 		</section>
 		<!-- <section>
 			<GoogleMap lat={mapCoordinates.lat} lng={mapCoordinates.lng} apiKey={googleApiKey} />

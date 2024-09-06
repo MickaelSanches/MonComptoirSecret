@@ -2,15 +2,27 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NewsTicker from '../components/NewsTicker.jsx';
 import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
 import IPL from '../components/LumierePulsee.jsx';
+import FAQ from '../components/FAQ.jsx';
+import Footer from '../components/Footer.jsx';
 ---
 
 <BaseLayout>
     <NewsTicker client:load />
     <Header client:load />
     <main class="p-4 text-black">
+        <section class="text-center mt-8 space-y-4 cursor-none">
+            <a href="/epilation-definitive" class="inline-block bg-gradient-footer text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-header transition-all">
+            En savoir plus sur l'Épilation Définitive
+            </a>
+            <a href="/photorajeunissement" class="inline-block bg-gradient-footer text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-header transition-all">
+            En savoir plus sur le Photorajeunissement
+            </a>
+        </section>
         <IPL client:load />
     </main>
+    <section>
+        <FAQ client:load />
+    </section>
     <Footer />
 </BaseLayout>

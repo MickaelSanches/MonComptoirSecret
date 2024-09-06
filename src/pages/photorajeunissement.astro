@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsTicker from '../components/NewsTicker.jsx';
+import Header from '../components/Header.jsx';
+import FAQ from '../components/FAQ.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<BaseLayout>
+    <NewsTicker client:load />
+  <Header client:load />
+  <main class="p-6 text-black space-y-8 max-w-5xl mx-auto">
+    <h1 class="tracking-wider text-3xl mb-16 text-center text-gray-800">Tout savoir sur le Photorajeunissement à la Lumière Pulsée</h1>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Qu'est-ce que le photorajeunissement ?</h2>
+      <p class="text-lg">
+        Le photorajeunissement est une technique non invasive qui utilise des impulsions lumineuses pour traiter les signes visibles du vieillissement cutané. L'IPL stimule la production de collagène, permettant d'améliorer la texture de la peau, de réduire les taches pigmentaires, les rougeurs diffuses, les traces d'acnés, un teint de peau irrégulier, les ridules et améliore l'aspect des vergetures.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Comparaison avec d'autres méthodes :</h2>
+        <p class="text-lg">
+            Contrairement aux peelings chimiques ou aux traitements au laser, l'IPL est plus doux pour la peau et ne nécessite généralement pas de temps de récupération. Cependant, les résultats apparaissent de manière progressive, nécessitant plusieurs séances pour un effet optimal.
+        </p>
+        <img loading="lazy" src="/img/bienfaitspr.webp" alt="Les bienfaits du photorajeunissement" class="w-full rounded-lg shadow-md object-cover">
+      </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Les bienfaits du photorajeunissement</h2>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li><u>Réduction des taches pigmentaires :</u> L'IPL cible les taches pigmentaires et les taches brunes causées par le soleil, redonnant à la peau une apparence plus uniforme.</li>
+        <li><u>Amélioration de la texture de la peau :</u> En stimulant la production de collagène, le photorajeunissement raffermit la peau, la rendant plus lisse et éclatante.</li>
+        <li><u>Réduction des rougeurs et des capillaires :</u> Ce traitement est idéal pour les personnes souffrant de rosacée ou de rougeurs diffuses. Il aide à atténuer les vaisseaux sanguins visibles.</li>
+        <li><u>Résultats rapides et durables :</u> Les effets du photorajeunissement sont visibles après plusieurs séances et s'améliorent au fil du temps.</li>
+      </ul>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Le déroulement d'une séance de photorajeunissement</h2>
+      <p class="text-lg">
+        Chaque séance de photorajeunissement commence par le nettoyage de la peau. Un gel frais est ensuite appliqué pour maximiser l'efficacité des flashs lumineux. L'appareil IPL envoie des impulsions lumineuses qui pénètrent dans la peau pour cibler les cellules responsables des imperfections. Les séances durent en moyenne 20 à 30 minutes, selon la zone traitée.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Combien de séances sont nécessaires ?</h2>
+      <p class="text-lg">
+        En fonction de l'état de la peau et des objectifs, généralement, 4 à 6 séances espacées de 4 semaines sont recommandées pour obtenir des résultats durables. Certaines personnes constatent une amélioration dès la première séance, mais les meilleurs résultats apparaissent progressivement après plusieurs séances.
+      </p>
+
+        <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Séances d'entretien :</h3>
+        <p class="text-lg">
+            Pour maintenir les résultats, des séances d'entretien sont à réalisées tous les 6 à 12 mois.
+        </p>
+        <img loading="lazy" src="/img/APpr.webp" alt="Avant après séance d'épilation à la lumière pulsée" class="w-full rounded-lg shadow-md object-cover">
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Précautions et contre-indications</h2>
+      <p class="text-lg">
+        Comme pour l'IPL, il est essentiel d'éviter toute exposition au soleil avant et après le traitement. Les rougeurs sont les effets secondaires les plus courants, mais elles disparaissent généralement en quelques heures. Il est recommandé d'utiliser une crème solaire à indice élevé après chaque séance pour protéger la peau.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Le photorajeunissement est-il fait pour vous ?</h2>
+      <p class="text-lg">
+        Le photorajeunissement est idéal pour les personnes souhaitant améliorer l'apparence de leur peau sans chirurgie. Il convient particulièrement à celles ayant des taches pigmentaires, des rougeurs diffuses ou des ridules. Cependant, un bilan personnalisé est recommandé pour s'assurer que ce traitement convient à votre type de peau et à vos besoins.
+      </p>
+
+      <h3 class="tracking-wider font-semibold text-2xl mb-4 text-gray-800">Contre-indications :</h3>
+        <p class="text-lg">
+            Ce traitement est déconseillé aux femmes enceintes et aux personnes ayant des maladies de peau actives. Un diagnostic personnalisé avec un professionnel est indispensable avant de commencer les séances.
+        </p>
+    </section>
+
+    <section class="space-y-4">
+        <h2 class="tracking-wider font-semibold text-2xl mb-4 text-center text-gray-800">Conclusion</h2>
+        <p class="text-lg">
+            Le photorajeunissement est une solution non invasive idéale pour les personnes souhaitant améliorer la texture et l'apparence de leur peau sans avoir recours à des méthodes plus invasives. Grâce à l'IPL, vous pouvez traiter les signes du vieillissement cutané tout en profitant d'une peau plus éclatante. Réservez votre bilan gratuit pour découvrir si ce traitement est fait pour vous.
+        </p>
+      </section>
+
+    <section class="text-center mt-8 cursor-none">
+      <a href="/espace-client" class="inline-block bg-gradient-footer text-black px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-header transition-all">Prenez rendez-vous pour un bilan OFFERT</a>
+    </section>
+
+  </main>
+  <section>
+    <FAQ client:load />
+</section>
+  <Footer />
+</BaseLayout>
