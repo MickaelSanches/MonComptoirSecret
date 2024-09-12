@@ -20,7 +20,10 @@ import BackToTop from '../components/BackToTop.jsx';
 	content={Astro.generator} />
     <meta 
 	name="description" 
-	content="Mon Comptoir Secret, institut de beauté à la pointe de l'innovation avec des soins comme l'épilation définitive et le photorajeunissement. Prenez rendez-vous pour un bilan offert." />
+	content="Découvrez Mon Comptoir Secret, votre institut de beauté à Aix-les-Bains, spécialisé dans l'épilation définitive et le photorajeunissement. Réservez votre bilan gratuit dès aujourd'hui !" />
+	<meta 
+	name="keywords" 
+	content="épilation définitive, photorajeunissement, institut de beauté, Aix-les-Bains" />
     <meta 
 	name="robots" 
 	content="index, follow" />
@@ -65,17 +68,23 @@ import BackToTop from '../components/BackToTop.jsx';
 		"image": "https://moncomptoirsecret.com/img/logomcs.webp",
 		"description": "Institut de beauté offrant des soins esthétiques, épilation définitive et photorajeunissement.",
 		"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "4 Chemin en Calloud",
-			"addressLocality": "Aix-les-Bains",
-			"addressRegion": "Savoie",
-			"postalCode": "73100"
-			},
+		"@type": "PostalAddress",
+		"streetAddress": "4 Chemin en Calloud",
+		"addressLocality": "Aix-les-Bains",
+		"addressRegion": "Savoie",
+		"postalCode": "73100"
+		},
 		"telephone": "+33 6 17 34 49 99",
 		"openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+		"priceRange": "$$",
+		"serviceArea": {
+		"@type": "Place",
+		"name": "Savoie"
+		},
+		"services": ["Épilation définitive", "Photorajeunissement", "Soins visage", "Onglerie"],
 		"sameAs": [
-			"https://www.instagram.com/moncomptoirsecret",
-			"https://www.facebook.com/moncomptoirsecret"
+		"https://www.instagram.com/moncomptoirsecret",
+		"https://www.facebook.com/moncomptoirsecret"
 		]
 		}
 		</script>
@@ -84,7 +93,7 @@ import BackToTop from '../components/BackToTop.jsx';
 	is:inline 
 	src="https://kit.fontawesome.com/2898a0ac51.js" 
 	crossorigin="anonymous"></script>
-    <title>Mon Comptoir Secret</title>
+    <title>Mon Comptoir Secret - Institut de Beauté à Aix-les-Bains | Épilation définitive & Photorajeunissement</title>
     <link 
 	rel="stylesheet" 
 	href="/scripts/cursor.js">
