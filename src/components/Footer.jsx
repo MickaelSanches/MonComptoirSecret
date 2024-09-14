@@ -12,8 +12,10 @@ const Footer = () => {
           <h4 className="tracking-wider text-xl mb-4">MON COMPTOIR SECRET</h4>
           <ul>
             <li><a href="/" className="hover:text-buton">Accueil</a></li>
+            <li><a href="/prendre-rendez-vous" className="hover:text-buton">Prendre RDV</a></li>
             <li><a href="/prestations" className="hover:text-gradientStart">Prestations</a></li>
             <li><a href="/histoire" className="hover:text-buton">Histoire</a></li>
+            <li><a href="/lumiere-pulsee" className="hover:text-gradientStart">Lumière Pulsée</a></li>
             <li><a href="/shop" className="hover:text-buton">Shop</a></li>
             <li><a href="/contact" className="hover:text-buton">Contact</a></li>
             <li><a href="/mentions-legales" className="hover:text-buton">Mentions légales</a></li>

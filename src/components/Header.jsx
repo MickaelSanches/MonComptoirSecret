@@ -24,7 +24,7 @@ const Header = () => {
           <li><a href="/histoire" className="hover:text-buton tracking-wide">HISTOIRE</a></li>
           <li><a href="/shop" className="hover:text-buton tracking-wide">SHOP</a></li>
           <li><a href="/lumiere-pulsee" className="hover:text-buton tracking-wide">LUMIÈRE PULSÉE</a></li>
-          <li><a href="/espace-client" className="hover:text-buton tracking-wide">PRENDRE RDV</a></li>
+          <li><a href="/prendre-rendez-vous" className="hover:text-buton tracking-wide">PRENDRE RDV</a></li>
           <li><a href="/contact" className="hover:text-buton tracking-wide">CONTACT</a></li>
         </ul>
       </nav>
