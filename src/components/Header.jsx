@@ -43,7 +43,7 @@ const Header = () => {
           <a href="/histoire" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">HISTOIRE</a>
           <a href="/shop" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">SHOP</a>
           <a href="/lumiere-pulsee" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">LUMIÈRE PULSÉE</a>
-          <a href="/espace-client" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRENDRE RDV</a>
+          <a href="/prendre-rendez-vous" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">PRENDRE RDV</a>
           <a href="/contact" className="tracking-wider block px-4 py-2 text-gray-800 hover:bg-gray-100">CONTACT</a>
         </nav>
       </div>
