@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import NewsTicker from '../components/NewsTicker.jsx';
 import CouponButton from '../components/CouponButton.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 ---
 
 <BaseLayout>
+  <NewsTicker client:load />
   <Header client:load />
   <main class="p-8 cursor-none text-black bg-grey">
     <h1 class="tracking-wider text-3xl mb-6 text-center text-black">OFFRE SPÉCIALE - AISSELLES OFFERTES !</h1>
