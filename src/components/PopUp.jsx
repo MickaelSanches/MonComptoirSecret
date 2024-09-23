@@ -46,6 +46,7 @@ const PromoPopup = () => {
                             />
                         </svg>
                     </button>
+                    {/* 
                     <div className="video-container mb-4 mx-auto cursor-none" style={{ maxHeight: '600px' }}>
                         <video
                             id="promo-video"
@@ -60,12 +61,16 @@ const PromoPopup = () => {
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    {/* <h2 className="text-xl font-bold mb-2 text-black">
-                        Dernières Promotions
-                    </h2>
-                    <p className="text-black">
-                        Profitez de nos dernières offres spéciales sur les soins et produits
-                    </p> */}
+                    */}
+
+                    {/* Image cliquable */}
+                    <a href="/OffreCoupon">
+                        <img
+                            src="/img/promoipl.webp"
+                            alt="Promotion"
+                            className="w-full h-auto cursor-none"
+                        />
+                    </a>
                 </div>
             </div>
         )
