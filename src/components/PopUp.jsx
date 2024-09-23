@@ -68,7 +68,8 @@ const PromoPopup = () => {
                         <img
                             src="/img/promoipl.webp"
                             alt="Promotion"
-                            className="w-full h-auto cursor-none"
+                            className="w-full cursor-none"
+                            style={{ maxHeight: '600px' }}
                         />
                     </a>
                 </div>
