@@ -67,6 +67,7 @@ const PromoPopup = () => {
                     <a href="/OffreCoupon">
                         <img
                             src="/img/promoipl.webp"
+                            loading="lazy"
                             alt="Promotion"
                             className="w-full cursor-none"
                             style={{ maxHeight: '600px' }}
