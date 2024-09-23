@@ -64,7 +64,7 @@ const PromoPopup = () => {
                     */}
 
                     {/* Image cliquable */}
-                    <a href="/OffreCoupon">
+                    <a href="https://www.planity.com/mon-comptoir-secret-73100-aix-les-bains/reservation" target="_blank">
                         <img
                             src="/img/promoipl.webp"
                             loading="lazy"
