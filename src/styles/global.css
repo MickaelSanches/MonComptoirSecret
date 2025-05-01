@@ -84,3 +84,99 @@ textarea:hover~#cursor-follower,
 .animate-popup {
     animation: popup 0.5s ease-in-out;
 }
+
+/* Prestation Page */
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-30%);
+    }
+  }
+  .animate-slide {
+    animation: slide 3s ease-out forwards;
+  }
+  .prestations-lock-scroll {
+    overflow: hidden !important;
+    height: 100vh;
+  }
+  html.prestations-lock-scroll {
+    overflow: hidden !important;
+  }
+  @media screen and (max-width: 768px) {
+    html.prestations-lock-scroll,
+    body.prestations-lock-scroll {
+      overflow: hidden !important;
+      height: 100vh !important;
+    }
+  
+    #intro-text {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 90vw;
+      text-align: center;
+    }
+  
+    #intro-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  
+    .prestations-card {
+      width: 80vw;
+      height: 80vh;
+      margin-left: 0,5rem;
+      margin-right: 0,5rem;
+    }
+  
+    .prestations-card h2 {
+      font-size: 2rem;
+    }
+  
+    .prestations-card a {
+      font-size: 1rem;
+    }
+  
+    .animate-arrow-loop {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  
+  @keyframes pulse-custom {
+    0%, 50% { opacity: 1; transform: scale(1); }
+    20% { opacity: 0.7; transform: scale(1.05); }
+  }
+  
+  .animate-pulse-custom {
+    animation: pulse-custom 1.8s infinite ease-in-out;
+  }
+  
+  @keyframes arrow-loop {
+    0% {
+      transform: translateX(0) rotate(135deg);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateX(-10px) rotate(135deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0) rotate(135deg);
+      opacity: 0.2;
+    }
+  }
+  
+  .animate-arrow-loop {
+    animation: arrow-loop 1.5s infinite ease-in-out;
+  }

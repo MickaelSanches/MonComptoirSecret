@@ -10,6 +10,7 @@ export default {
         wider: '0.05em',
       },
       fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
         caslon: ['"ITC Caslon No 224"', 'serif'],
         avenir: ['"Avenir Next"', 'sans-serif'],
       },
