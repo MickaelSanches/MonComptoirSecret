@@ -47,7 +47,7 @@ const LumierePulsee = () => {
 
   return (
     <section className="max-w-7xl mx-auto p-6 lg:p-12">
-      <h1 className="text-4xl lg:text-5xl text-center mb-16">Tout savoir sur la lumière pulsée</h1>
+      <h1 className="text-4xl lg:text-4xl text-center tracking-wider mb-16">Tout savoir sur la lumière pulsée</h1>
       <div className="space-y-16">
         {SECTIONS.map((section, i) => (
           <div

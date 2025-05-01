@@ -9,7 +9,7 @@ const FAQ = () => {
 
   return (
     <section className="max-w-4xl mx-auto p-8">
-      <h2 className="tracking-wider font-semibold text-2xl mb-8 text-center text-gray-800">Questions Fréquemment Posées</h2>
+      <h2 className="tracking-wider text-3xl mb-8 text-center text-gray-800">Questions Fréquemment Posées</h2>
       <div className="space-y-4">
         {faqData.map((faq, index) => (
           <div key={index} className="border border-gray-300 p-4 rounded-lg shadow-md">
@@ -17,7 +17,7 @@ const FAQ = () => {
               className="w-full text-left text-black focus:outline-none flex justify-between items-center"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-lg font-semibold">{faq.question}</span>
+              <span className="text-lg tracking-wider font-caslon">{faq.question}</span>
               <span>{open === index ? '-' : '+'}</span>
             </button>
             {open === index && (
