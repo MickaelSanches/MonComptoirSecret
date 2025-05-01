@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import NewsTicker from '../components/NewsTicker.jsx';
 import Header from '../components/Header.jsx';
 import IPL from '../components/LumierePulsee.jsx';
-import FAQ from '../components/FAQ.jsx';
+import FAQ from '../components/FAQIpl.jsx';
+import CTAIpl from '../components/CTAIpl.jsx';
 import Footer from '../components/Footer.jsx';
 ---
 
@@ -23,6 +24,7 @@ import Footer from '../components/Footer.jsx';
     </main>
     <section>
         <FAQ client:load />
+        <CTAIpl client:load />
     </section>
     <Footer />
 </BaseLayout>
