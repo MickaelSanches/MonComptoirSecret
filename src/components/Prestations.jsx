@@ -3,12 +3,42 @@ import Header from "../components/Header.jsx";
 
 const prestations = [
   { title: "Onglerie", image: "/img/7.webp", link: "/#onglerie", cta: false },
-  { title: "Beauté du Regard", image: "/img/8.webp", link: "/#regard", cta: false },
-  { title: "Épilation Définitive", image: "/img/epilation1.webp", link: "/epilation-definitive", cta: true },
-  { title: "Photorajeunissement", image: "/img/photorajeunissement.webp", link: "/photorajeunissement", cta: true },
-  { title: "Épilation Classique", image: "/img/epilationclassique.webp", link: "/#epilation", cta: false },
-  { title: "Maquillage", image: "/img/maquillage.webp", link: "/#maquillage", cta: false },
-  { title: "Produits & Bijoux", image: "/img/bijoux.webp", link: "/shop", cta: true },
+  {
+    title: "Beauté du Regard",
+    image: "/img/8.webp",
+    link: "/#regard",
+    cta: false,
+  },
+  {
+    title: "Épilation Définitive",
+    image: "/img/epilation1.webp",
+    link: "/epilation-definitive",
+    cta: true,
+  },
+  {
+    title: "Photorajeunissement",
+    image: "/img/photorajeunissement.webp",
+    link: "/photorajeunissement",
+    cta: true,
+  },
+  {
+    title: "Épilation Classique",
+    image: "/img/epilationclassique.webp",
+    link: "/#epilation",
+    cta: false,
+  },
+  {
+    title: "Maquillage",
+    image: "/img/maquillage.webp",
+    link: "/#maquillage",
+    cta: false,
+  },
+  {
+    title: "Produits & Bijoux",
+    image: "/img/bijoux.webp",
+    link: "/shop",
+    cta: true,
+  },
 ];
 
 export default function PrestationsSlider() {
@@ -62,7 +92,7 @@ export default function PrestationsSlider() {
       <Header client:load />
       <div
         ref={containerRef}
-        className="flex overflow-x-scroll overflow-y-hidden h-screen scroll-smooth no-scrollbar"
+        className="flex overflow-x-scroll overflow-y-hidden h-[100dvh] scroll-smooth no-scrollbar"
         style={{ scrollSnapType: "x mandatory" }}
       >
         <div
@@ -112,7 +142,7 @@ export default function PrestationsSlider() {
                   Découvrir
                 </a>
               )}
-              <h2 className="text-4xl text-black md:text-3xl sm:text-xl whitespace-normal break-words">
+              <h2 className="text-4xl text-black md:text-3xl sm:text-xl break-words whitespace-normal">
                 {item.title}
               </h2>
             </div>

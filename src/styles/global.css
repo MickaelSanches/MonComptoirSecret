@@ -113,6 +113,9 @@ textarea:hover~#cursor-follower,
     overflow: hidden !important;
   }
   @media screen and (max-width: 768px) {
+    _::-webkit-full-page-media, _:future, :root .safari_only {
+      padding-bottom: 65px;
+    }
     html.prestations-lock-scroll,
     body.prestations-lock-scroll {
       overflow: hidden !important;
@@ -133,7 +136,7 @@ textarea:hover~#cursor-follower,
   
     .prestations-card {
       width: 80vw;
-      height: 80vh;
+      height: 70vh;
       margin-left: 0,5rem;
       margin-right: 0,5rem;
     }
